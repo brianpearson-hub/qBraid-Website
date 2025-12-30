@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qBraid SDK - Universal Quantum Python Package</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Nunito:wght@300&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="top-banner">Build the future of quantum software — join innovators at <a href="https://www.quantumdeveloperday.com" target="_blank" style="color: white; text-decoration: none; font-weight: 700;">Quantum Developer Day 2025!</a></div>
+    
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAAoCAYAAADDQlebAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABfASURBVHgB7Z0HmBRF1sevd3fJOeckOZNzDhJEkigZBQEBCYqAggiYM2Y9wzl9ep6eAWMWPc9ETkREAUVyznmXsLu7839VPT09PT0zu7Ozs8v2/55nnt7prup01VR1vfpVhQoJgiAIgiAIgiAIgiCIUEKvEBEBABFBEARBEARBEARBhBAqtM+kciwLgiAIgiAIgiAIgggjqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBMT/A6PZ+H+V5l5VAAAAAElFTkSuQmCC" alt="qBraid Logo">
+            </a>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="lab.html">Products <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="lab.html">Lab</a>
+                        <a href="runtime.html">Runtime</a>
+                        <a href="qbook.html">qBook</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="enterprises.html">Solutions <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="enterprises.html">Enterprise</a>
+                        <a href="developers.html">Developers</a>
+                        <a href="quantum-companies.html">Quantum Companies</a>
+                        <a href="academia.html">Educators</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="docs.html">Resources <span class="dropdown-arrow">▼</span></a>
+                    <div class="dropdown-content">
+                        <a href="docs.html">Docs</a>
+                        <a href="sdk.html">SDK</a>
+                        <a href="https://github.com/qBraid" target="_blank">GitHub</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://account.qbraid.com" class="btn btn-outline">Login</a>
+                <a href="https://account.qbraid.com" class="btn btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>qBraid SDK</h1>
+            <p>Universal Python package for quantum computing</p>
+        </div>
+    </section>
+
+    <section class="page-content">
+        <div class="container">
+            <div class="content-section">
+                <h2>One SDK for All Quantum Providers</h2>
+                <p>The qBraid SDK provides a unified interface for accessing quantum devices and simulators from multiple providers. Write code once and run it anywhere, with seamless transpilation between quantum frameworks and simplified job management.</p>
+                
+                <div style="background: #1a1a1a; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; font-family: monospace;">
+                    <code style="color: #fff;">
+pip install qbraid
+                    </code>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="use-case-card">
+                    <h3>Universal API</h3>
+                    <p>Single interface to access quantum devices from AWS, IBM, IonQ, and more without provider-specific code.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Circuit Transpilation</h3>
+                    <p>Automatically convert circuits between Qiskit, Cirq, Braket, PyTKET, and other frameworks.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Job Management</h3>
+                    <p>Unified job submission, tracking, and result retrieval across all quantum providers.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Device Discovery</h3>
+                    <p>Search and filter quantum devices by provider, topology, qubit count, and availability.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Open Source</h3>
+                    <p>Fully open source and community-driven. Contribute on GitHub or suggest new features.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Well Documented</h3>
+                    <p>Comprehensive API documentation with examples, tutorials, and guides for all features.</p>
+                </div>
+            </div>
+
+            <div class="content-section" style="margin-top: 4rem;">
+                <h2>Get Started with qBraid SDK</h2>
+                <p>Install the SDK and access our comprehensive documentation to start building.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <a href="https://docs.qbraid.com/sdk" target="_blank" class="btn btn-primary">View SDK Docs</a>
+                    <a href="https://github.com/qBraid/qBraid" target="_blank" class="btn btn-outline">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="lab.html">Lab</a></li>
+                        <li><a href="runtime.html">Runtime</a></li>
+                        <li><a href="qbook.html">qBook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="enterprises.html">Enterprise</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                        <li><a href="quantum-companies.html">Quantum Companies</a></li>
+                        <li><a href="academia.html">Educators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="docs.html">Docs</a></li>
+                        <li><a href="sdk.html">SDK</a></li>
+                        <li><a href="https://github.com/qBraid" target="_blank">GitHub</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="mailto:contact@qbraid.com">Contact</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 - Copyright qBraid, all rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+

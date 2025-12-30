@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qBraid - The One-Stop Quantum Computing Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800&family=Nunito:wght@300&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #46096F;
+            --primary-dark: #350752;
+            --secondary: #df0982;
+            --text: #ffffff;
+            --text-light: #b8b8b8;
+            --bg: #000000;
+            --bg-light: #0a0a0a;
+            --border: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo svg {
+            height: 40px;
+            width: auto;
+        }
+        
+        .logo-text {
+            fill: white;
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-cta {
+            display: flex;
+            gap: 1rem;
+            margin-left: auto;
+        }
+
+        /* Buttons */
+        .btn {
+            font-family: 'Nunito Sans', sans-serif;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(223, 9, 130, 0.4);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+            box-shadow: 0 5px 20px rgba(223, 9, 130, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 0 6rem;
+            background: linear-gradient(135deg, #df0982 0%, #46096F 50%, #df0982 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: linear-gradient(135deg, #df0982 0%, #46096F 50%, #df0982 100%);
+            color: white;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 101;
+            line-height: 1.3;
+        }
+
+        .top-banner strong {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .top-banner a {
+            transition: opacity 0.2s;
+        }
+
+        .top-banner a:hover {
+            opacity: 0.8;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        h2 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Providers Scrolling */
+        .providers-wrapper {
+            overflow: hidden;
+            margin: 3rem 0;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .providers {
+            display: flex;
+            gap: 3rem;
+            animation: scroll 25s linear infinite;
+            width: fit-content;
+            will-change: transform;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .provider-logo {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: 700;
+            color: var(--text-light);
+            padding: 1.5rem 2.5rem;
+            text-align: center;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            min-width: 150px;
+        }
+
+        .provider-logo:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            color: var(--text);
+            box-shadow: 0 5px 20px rgba(70, 9, 111, 0.4);
+        }
+
+        /* Use Cases */
+        .use-cases {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .use-case-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(223, 9, 130, 0.4);
+            border-color: var(--secondary);
+        }
+
+        .use-case-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary);
+        }
+
+        .use-case-card p {
+            color: var(--text-light);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .feature-card {
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(223, 9, 130, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            gap: 2rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--secondary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            font-family: 'Nunito Sans', sans-serif;
+            padding: 0.8rem 2rem;
+            background: var(--bg-light);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.2s;
+            color: var(--text);
+        }
+
+        .tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .tab:hover {
+            border-color: var(--primary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: grid;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #df0982 0%, #46096F 50%, #df0982 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            line-height: 2;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Build the future of quantum software — join innovators at <a href="https://www.quantumdeveloperday.com" target="_blank" style="color: white; text-decoration: none; font-weight: 700;">Quantum Developer Day 2025!</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAAoCAYAAADDQlebAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAABfASURBVHgB7Z0HmBRF1sevd3fJOeckOZNzDhJEkigZBQEBCYqAggiYM2Y9wzl9ep6eAWMWPc9ETkREAUVyznmXsLu7839VPT09PT0zu7Ozs8v2/55nnt7prup01VR1vfpVhQoJgiAIgiAIgiAIgiCIUEKvEBEBABFBEARBEARBEARBhBAqtM+kciwLgiAIgiAIgiAIgggjqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBAQVWoIgCIIgCIIgCIIgIKjQEgRBEARBEARBEAQBQYWWIAiCIAiCIAiCIAgIKrQEQRAEQRAEQRAEQUBQoSUIgiAIgiAIgiAIAoIKLUEQBEEQBEEQBEEQEFRoCYIgCIIgCIIgCIKAoEJLEARBEARBEARBEAQEFVqCIAiCIAiCIAiCICCo0BIEQRAEQRAEQRAEAUGFliAIgiAIgiAIgiAICCq0BEEQBEEQBEEQBEFAUKElCIIgCIIgCIIgCAKCCi1BEARBEARBEARBEBBUaAmCIAiCIAiCIAiCgKBCSxAEQRAEQRAEQRAEBBVagiAIgiAIgiAIgiAgqNASBEEQBEEQBEEQBAFBhZYgCIIgCIIgCIIgCAgqtARBEARBEARBEARBQFChJQiCIAiCIAiCIAgCggotQRAEQRAEQRAEQRAQVGgJgiAIgiAIgiAIgoCgQksQBEEQBEEQBEEQBMT/A6PZ+H+V5l5UAAAAAElFTkSuQmCC" alt="qBraid Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="https://account.qbraid.com" class="btn btn-outline">Login</a>
+                <a href="https://account.qbraid.com" class="btn btn-primary">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The One-Stop<br>Quantum Computing<br>Platform</h1>
+            <p>Access the world's most connected quantum startup.</p>
+            <a href="#" class="btn btn-primary" style="font-size: 1.1rem; padding: 0.8rem 2rem;">Launch qBraid</a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section>
+        <div class="container">
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">24+</span>
+                    <span class="stat-label">QPUs & Simulators</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">18+</span>
+                    <span class="stat-label">Quantum SDKs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">23K+</span>
+                    <span class="stat-label">Developers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Providers Section -->
+    <section>
+        <div class="container">
+            <h2>Connect to QPUs, GPUs, CPUs</h2>
+            <p class="section-subtitle">No vendor lock-in. No installations. Every leading modality.<br>All of these providers, all in one place.</p>
+        </div>
+        <div class="providers-wrapper">
+            <div class="providers">
+                <!-- First set -->
+                <div class="provider-logo">AWS</div>
+                <div class="provider-logo">IBM</div>
+                <div class="provider-logo">IonQ</div>
+                <div class="provider-logo">Intel</div>
+                <div class="provider-logo">IQM</div>
+                <div class="provider-logo">NVIDIA</div>
+                <div class="provider-logo">QuEra</div>
+                <div class="provider-logo">Equal1</div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="provider-logo">AWS</div>
+                <div class="provider-logo">IBM</div>
+                <div class="provider-logo">IonQ</div>
+                <div class="provider-logo">Intel</div>
+                <div class="provider-logo">IQM</div>
+                <div class="provider-logo">NVIDIA</div>
+                <div class="provider-logo">QuEra</div>
+                <div class="provider-logo">Equal1</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="solutions">
+        <div class="container">
+            <h2>Quantum Solutions for Everyone</h2>
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('enterprises')">Enterprises</div>
+                <div class="tab" onclick="showTab('quantum-companies')">Quantum Companies</div>
+                <div class="tab" onclick="showTab('academics')">Academics</div>
+            </div>
+            
+            <!-- Enterprises Tab -->
+            <div id="enterprises" class="use-cases tab-content active">
+                <div class="use-case-card">
+                    <h3>Financial Asset Risk Modeling</h3>
+                    <p>Push the frontiers of portfolio and asset management with leading quantum risk modeling algorithms.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Drug Discovery Optimization</h3>
+                    <p>Utilize quantum algorithms like VQE to streamline molecular simulations and enhance the drug design process.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Supply Chain Optimization</h3>
+                    <p>Improve distribution efficiency through quantum algorithms that analyze vast parameters for real-time decision-making.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>AI/ML + Quantum</h3>
+                    <p>Explore AI/ML approaches to accelerate innovation in quantum circuit optimization with hybrid workflows.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Cybersecurity Protocols</h3>
+                    <p>Secure yourself with quantum algorithms for advanced encryption techniques, safeguarding data against future threats.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Energy Grid Optimization</h3>
+                    <p>Optimize power distribution networks using quantum algorithms for improved efficiency and sustainability.</p>
+                </div>
+            </div>
+
+            <!-- Quantum Companies Tab -->
+            <div id="quantum-companies" class="use-cases tab-content">
+                <div class="use-case-card">
+                    <h3>Integrate Quantum Hardware</h3>
+                    <p>Connect quantum hardware to our managed API service both on-prem and through the cloud with seamless deployment.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Developer Network Access</h3>
+                    <p>Reach 23,000+ quantum developers through our platform and grow your quantum computing ecosystem.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Device Usage Analytics</h3>
+                    <p>Collect and analyze device usage metrics to understand customer behavior and optimize hardware performance.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Managed User Access</h3>
+                    <p>Control and manage user permissions for your quantum devices through our comprehensive access management system.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Software Deployment</h3>
+                    <p>Deploy new software and updates effortlessly across your quantum computing infrastructure.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Cloud & On-Premise Integration</h3>
+                    <p>Flexible integration options supporting both cloud-based and on-premise quantum hardware deployments.</p>
+                </div>
+            </div>
+
+            <!-- Academics Tab -->
+            <div id="academics" class="use-cases tab-content">
+                <div class="use-case-card">
+                    <h3>Quantum Education</h3>
+                    <p>Teach quantum computing courses with qBook and qBraid Lab, providing students hands-on access to real quantum hardware.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Research Computing</h3>
+                    <p>Conduct cutting-edge quantum research with direct access to multiple QPUs and comprehensive development tools.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Multi-Framework Support</h3>
+                    <p>Showcase different quantum python frameworks including Qiskit, Cirq, Amazon Braket, and more in one environment.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Course Deployment</h3>
+                    <p>Deploy quantum computing courses to qBook with interactive notebooks and tutorials for enhanced learning experiences.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Lab Management</h3>
+                    <p>Provide your entire lab with low-overhead access to quantum devices without complex infrastructure setup.</p>
+                </div>
+                <div class="use-case-card">
+                    <h3>Student Collaboration</h3>
+                    <p>Enable seamless collaboration between students, researchers, and professors on quantum computing projects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="products">
+        <div class="container">
+            <h2>Build Your Heart Out</h2>
+            <p class="section-subtitle">Start building quantum applications without the setup hassle.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🧪 qBraid Lab</h3>
+                    <p>Cloud-based IDE with Jupyter notebooks, managed environments, and direct quantum hardware access.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ qBraid Runtime</h3>
+                    <p>Simplifies quantum computing by integrating sessions, providers, devices, and jobs into a cohesive workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 qBook</h3>
+                    <p>Learn quantum computing with our comprehensive Q-12 Initiative course covering quantum computing basics.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔐 Unified Login</h3>
+                    <p>Access Amazon Braket, Azure Quantum, and more — all with one qBraid login.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🤖 AI for Quantum</h3>
+                    <p>Use in-line completion, code generation, and ChatGPT-enhanced search all in qBraid Lab.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔍 Omnisearch</h3>
+                    <p>Search across Google, Github, Stack Overflow, and ChatGPT, all at once, on all things quantum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Start Building?</h2>
+            <p>Join 23,000+ quantum developers on the world's most connected quantum platform.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn btn-primary">Get Started Free</a>
+                <a href="#" class="btn btn-outline">View Documentation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Lab</a></li>
+                        <li><a href="#">Runtime</a></li>
+                        <li><a href="#">qBook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Enterprise</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Quantum Companies</a></li>
+                        <li><a href="#">Educators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Docs</a></li>
+                        <li><a href="#">SDK</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 - Copyright qBraid, all rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
