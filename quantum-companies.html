@@ -235,17 +235,32 @@
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
       border-radius: 1rem;
-      padding: 1.5rem;
+      padding: 2rem;
       color: var(--text-muted);
       min-height: 180px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+      transition: all 0.3s;
     }
+
+    .testimonial-card:hover {
+      border-color: rgba(70, 9, 111, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
     .testimonial-quote {
-      color: var(--secondary);
+      color: var(--primary-light);
       font-size: 1.5rem;
       line-height: 1;
       margin-bottom: 0.75rem;
     }
+
+    .testimonial-text {
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
     .testimonial-author {
       display: flex;
       align-items: center;
