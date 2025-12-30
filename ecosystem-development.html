@@ -250,6 +250,33 @@
     .footer-legal a { color: var(--text-muted); text-decoration: none; font-size: 0.875rem; transition: color 0.2s; }
     .footer-legal a:hover { color: var(--text); }
 
+    /* Scroll to Top Button */
+    .scroll-to-top {
+      display: none;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 1.5rem auto 0;
+      box-shadow: 0 4px 12px rgba(70, 9, 111, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-to-top:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(70, 9, 111, 0.6);
+    }
+
+    .scroll-to-top:active {
+      transform: translateY(0);
+    }
+
     @media (max-width: 1024px) {
       .footer-content { grid-template-columns: repeat(2, 1fr); }
     }
@@ -273,6 +300,7 @@
       .footer-links li { margin-bottom: 0.5rem; }
       .footer-bottom { flex-direction: column; text-align: center; padding-top: 1.5rem; gap: 0.75rem; }
       .subscribe-input, .subscribe-button { width: 100%; }
+      .scroll-to-top { display: flex; }
     }
   </style>
 </head>
@@ -548,6 +576,8 @@
         <a href="terms.html">Terms of Service</a>
       </div>
     </div>
+
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">↑</button>
   </footer>
 </body>
 </html>
