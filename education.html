@@ -539,6 +539,18 @@
     }
     .footer a:hover { color: var(--text); }
 
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: auto;
+    }
+
     @media (max-width: 1024px) {
       .footer-content {
         grid-template-columns: repeat(2, 1fr);
@@ -558,6 +570,14 @@
       .nav-links,
       .nav-buttons {
         display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
       }
 
       .section {
@@ -664,6 +684,8 @@
         <a href="https://account.qbraid.com/" class="btn btn-secondary">Log In</a>
         <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
       </div>
+
+      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
     </div>
   </nav>
 
