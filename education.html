@@ -490,7 +490,16 @@
       padding: 1.5rem 1.5rem 2rem;
       color: var(--text-muted);
       min-height: 180px;
+      position: relative;
+      transition: all 0.3s;
     }
+
+    .testimonial-card:hover {
+      border-color: rgba(70, 9, 111, 0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
     .testimonial-card h4 {
       margin: 0 0 0.5rem;
       color: var(--text);
@@ -498,7 +507,7 @@
       font-size: 1.05rem;
     }
     .testimonial-quote {
-      color: var(--secondary);
+      color: var(--primary-light);
       font-size: 1.5rem;
       line-height: 1;
       margin-bottom: 0.75rem;
