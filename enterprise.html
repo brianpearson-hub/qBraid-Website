@@ -292,6 +292,74 @@
     .footer-legal a:hover {
       color: var(--text);
     }
+
+    @media (max-width: 1024px) {
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 100px;
+        min-height: 70vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn,
+      .btn-large {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .section {
+        padding: 4rem 1.5rem;
+      }
+
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
     h1, .hero h1 { color: #fff; }
   .hero .gradient-text { color: #fff; background: none; -webkit-text-fill-color: #fff; }
 </style>

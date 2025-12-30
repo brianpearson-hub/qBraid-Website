@@ -993,6 +993,15 @@
         justify-content: center;
       }
 
+      .feature-row {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-row:nth-child(even) .feature-content,
+      .feature-row:nth-child(even) .feature-visual {
+        order: 0;
+      }
+
       .footer-content {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -1008,12 +1017,36 @@
         display: block;
       }
 
+      .hero {
+        min-height: 70vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+      }
+
       .section {
         padding: 4rem 1.5rem;
       }
 
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+
       .section-cta {
         padding: 2rem 1.5rem;
+      }
+
+      .cta-section {
+        padding: 2.5rem 1.5rem;
       }
 
       .features-grid {

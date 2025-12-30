@@ -543,6 +543,15 @@
       .footer-content {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .feature-row {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-row:nth-child(even) .feature-content,
+      .feature-row:nth-child(even) .feature-visual {
+        order: 0;
+      }
     }
 
     @media (max-width: 768px) {
@@ -558,6 +567,18 @@
       .hero {
         padding-top: 100px;
         min-height: 70vh;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
       }
 
       .hero-buttons {
@@ -578,8 +599,12 @@
         justify-content: center;
       }
 
+      .section-header {
+        margin-bottom: 2.5rem;
+      }
+
       .cta-section {
-        padding: 3rem 1.5rem;
+        padding: 2.5rem 1.5rem;
       }
 
       .footer-content {
@@ -755,8 +780,8 @@
   </section>
 
   <!-- Hackathons Section -->
-  <section class="section features-section">
-    <div class="features-inner">
+  <section class="section">
+    <div class="container">
       <div class="section-header">
         <h2>Hackathons</h2>
       </div>
