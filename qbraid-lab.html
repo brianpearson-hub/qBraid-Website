@@ -634,6 +634,93 @@
     }
     h1, .hero h1 { color: #fff; }
   .hero .gradient-text { color: #fff; background: none; -webkit-text-fill-color: #fff; }
+
+  /* University Logos Section */
+  .universities-section {
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+
+  .universities-section h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin-bottom: 3rem;
+    color: var(--text);
+  }
+
+  .logos-scattered {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2.5rem 3rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-placeholder {
+    width: 180px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px dashed var(--dark-border);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .logo-placeholder:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(70, 9, 111, 0.6);
+    transform: translateY(-4px);
+  }
+
+  /* Stagger effect for visual interest */
+  .logo-placeholder:nth-child(2) {
+    transform: translateY(15px);
+  }
+
+  .logo-placeholder:nth-child(3) {
+    transform: translateY(-10px);
+  }
+
+  .logo-placeholder:nth-child(5) {
+    transform: translateY(20px);
+  }
+
+  .logo-placeholder:nth-child(7) {
+    transform: translateY(-15px);
+  }
+
+  .logo-placeholder:nth-child(9) {
+    transform: translateY(12px);
+  }
+
+  .logo-placeholder:nth-child(10) {
+    transform: translateY(-8px);
+  }
+
+  .logo-placeholder:nth-child(12) {
+    transform: translateY(18px);
+  }
+
+  @media (max-width: 768px) {
+    .logos-scattered {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .logo-placeholder:nth-child(n) {
+      transform: translateY(0) !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -775,6 +862,27 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- Universities Section -->
+  <section class="universities-section">
+    <div class="container">
+      <h2>Trusted by 25,000+ Developers</h2>
+      <div class="logos-scattered">
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
+        <div class="logo-placeholder">University Logo</div>
       </div>
     </div>
   </section>
