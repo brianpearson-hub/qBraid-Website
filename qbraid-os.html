@@ -634,6 +634,126 @@
       color: var(--text);
     }
 
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: auto;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: rgba(15, 15, 15, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--dark-border);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu-item {
+      border-bottom: 1px solid var(--dark-border);
+    }
+
+    .mobile-menu-item > a,
+    .mobile-menu-toggle {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Nunito Sans', sans-serif;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-menu-toggle::after {
+      content: '▼';
+      font-size: 0.75rem;
+      transition: transform 0.3s;
+    }
+
+    .mobile-menu-toggle.active::after {
+      transform: rotate(180deg);
+    }
+
+    .mobile-menu-item > a:active,
+    .mobile-menu-toggle:active {
+      background: rgba(70, 9, 111, 0.2);
+      color: var(--secondary);
+    }
+
+    .mobile-submenu {
+      display: none;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem 0;
+    }
+
+    .mobile-submenu.active {
+      display: block;
+    }
+
+    .mobile-submenu a {
+      display: block;
+      padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .mobile-submenu a:active {
+      background: rgba(70, 9, 111, 0.2);
+      color: var(--text);
+    }
+
+    .mobile-menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem 1.5rem 1rem;
+      border-top: 1px solid var(--dark-border);
+      margin-top: 1rem;
+    }
+
+    .mobile-menu-buttons .btn {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
     /* Scroll to Top Button */
     .scroll-to-top {
       display: none;
@@ -677,6 +797,14 @@
       .nav-links,
       .nav-buttons {
         display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
       }
 
       .hero {
@@ -809,8 +937,59 @@
         <a href="https://account.qbraid.com/" class="btn btn-secondary">Log In</a>
         <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
       </div>
+
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
     </div>
   </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('products-submenu', this)">
+          Products
+        </button>
+        <div class="mobile-submenu" id="products-submenu">
+          <a href="pilots.html">qBraid Pilots</a>
+          <a href="qbraid-lab.html">qBraid Lab</a>
+          <a href="qbook.html">qBook</a>
+          <a href="qbraid-os.html">qBraid-OS</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('solutions-submenu', this)">
+          Solutions
+        </button>
+        <div class="mobile-submenu" id="solutions-submenu">
+          <a href="enterprise.html">Enterprise</a>
+          <a href="research.html">Researchers</a>
+          <a href="education.html">Educators</a>
+          <a href="quantum-companies.html">Quantum Companies</a>
+          <a href="ecosystem-development.html">Ecosystem Development</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('resources-submenu', this)">
+          Resources
+        </button>
+        <div class="mobile-submenu" id="resources-submenu">
+          <a href="https://docs.qbraid.com/">Documentation</a>
+          <a href="https://sdk.qbraid.com/">SDK</a>
+        </div>
+      </div>
+
+      <div class="mobile-menu-item">
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+
+    <div class="mobile-menu-buttons">
+      <a href="https://account.qbraid.com/" class="btn btn-secondary">Login</a>
+      <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -1034,6 +1213,50 @@
 
     <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">↑</button>
   </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('active');
+      
+      // Close all submenus when closing main menu
+      if (!mobileMenu.classList.contains('active')) {
+        const submenus = document.querySelectorAll('.mobile-submenu');
+        const toggles = document.querySelectorAll('.mobile-menu-toggle');
+        submenus.forEach(submenu => submenu.classList.remove('active'));
+        toggles.forEach(toggle => toggle.classList.remove('active'));
+      }
+    }
+
+    function toggleSubmenu(submenuId, toggleButton) {
+      const submenu = document.getElementById(submenuId);
+      submenu.classList.toggle('active');
+      toggleButton.classList.toggle('active');
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      
+      if (mobileMenu && mobileMenu.classList.contains('active')) {
+        if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+          toggleMobileMenu();
+        }
+      }
+    });
+
+    // Close mobile menu when window is resized to desktop size
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu && mobileMenu.classList.contains('active')) {
+          toggleMobileMenu();
+        }
+      }
+    });
+  </script>
 </body>
 </html>
 
