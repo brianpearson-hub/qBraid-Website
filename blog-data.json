@@ -55,6 +55,24 @@
     }
     ,
     {
+      "id": "ibm-quantum-lab-users-2025",
+      "title": "qBraid: The Premier Destination for IBM Quantum Lab users",
+      "slug": "qbraid-the-premier-destination-for-ibm-quantum-lab-users",
+      "date": "2025",
+      "author": {
+        "name": "Kenneth Heitritter",
+        "title": "Vice President of R&D",
+        "image": "Team Headshots/Kenny.png",
+        "bio": "Kenny helps users migrate seamlessly to qBraid Lab and tap into multi-vendor quantum hardware with zero-setup environments."
+      },
+      "category": "Press Releases",
+      "readTime": "5",
+      "excerpt": "Coming from IBM Quantum Lab? Learn how to start using qBraid Lab.",
+      "featuredImage": "Media/blog/ibm-quantum-lab-header.jpg",
+      "content": "blog-posts/qbraid-the-premier-destination-for-ibm-quantum-lab-users.html"
+    }
+    ,
+    {
       "id": "gpu4quantum-2025",
       "title": "GPUs on qBraid: Early Access and the GPU4Quantum Challenge",
       "slug": "gpu4quantum",
