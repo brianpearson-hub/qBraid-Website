@@ -754,12 +754,12 @@
 
     .demo-modal {
       position: relative;
-      width: min(960px, 100%);
+      width: min(1200px, 92vw);
       aspect-ratio: 16 / 9;
       background: #000;
       border-radius: 1rem;
       overflow: hidden;
-      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
+      box-shadow: 0 32px 80px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(223, 9, 130, 0.25);
     }
 
@@ -790,6 +790,7 @@
       width: 100%;
       height: 100%;
       border: none;
+      background: #000;
     }
 
     /* CTA Section */
@@ -1613,8 +1614,9 @@
         id="demo-iframe"
         src=""
         title="qBraid demo video"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allow="autoplay; fullscreen; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen
+        playsinline
       ></iframe>
     </div>
   </div>
@@ -1625,7 +1627,7 @@
       const overlay = document.getElementById('demo-overlay');
       const iframe = document.getElementById('demo-iframe');
       const closeBtn = document.getElementById('demo-close');
-      const DEMO_URL = 'https://www.youtube.com/embed/c2YvliEA_J4?autoplay=1&rel=0&modestbranding=1';
+      const DEMO_URL = 'https://www.youtube.com/embed/c2YvliEA_J4?autoplay=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1';
 
       function openDemo(event) {
         event.preventDefault();
