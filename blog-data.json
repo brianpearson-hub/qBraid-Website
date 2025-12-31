@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": "nsf-grant-2025",
+      "title": "qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem",
+      "slug": "qbraid-awarded-nsf-grant-to-advance-open-source-quantum-software-ecosystem",
+      "date": "2025-09-11",
+      "author": {
+        "name": "Ryan Hill",
+        "title": "CTO",
+        "image": "Media/authors/ryan-hill.jpg",
+        "bio": "Ryan Hill is the Chief Technology Officer at qBraid, leading the development of the platform's quantum computing infrastructure."
+      },
+      "category": "Press Releases",
+      "readTime": "2",
+      "excerpt": "qBraid wins NSF POSE grant to build open source ecosystem",
+      "featuredImage": "Media/blog/nsf-grant-header.jpg",
+      "content": "blog-posts/nsf-grant-2025.html"
+    }
+  ],
+  "categories": [
+    "All Categories",
+    "Press Releases",
+    "Product",
+    "Collaborations",
+    "Hackathons",
+    "Research"
+  ]
+}
+

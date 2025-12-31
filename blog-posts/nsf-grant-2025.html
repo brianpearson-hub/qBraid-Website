@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem | qBraid Blog</title>
+  <meta name="description" content="qBraid wins NSF POSE grant to build open source ecosystem">
+  <meta property="og:title" content="qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem">
+  <meta property="og:description" content="qBraid wins NSF POSE grant to build open source ecosystem">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="../Media/blog/nsf-grant-header.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #46096F;
+      --primary-dark: #3a0759;
+      --primary-light: #6b1aa3;
+      --secondary: #df0982;
+      --dark: #0f0f0f;
+      --dark-card: #1a1a1a;
+      --dark-border: rgba(255, 255, 255, 0.1);
+      --text: #ffffff;
+      --text-muted: #a1a1aa;
+      --gradient: linear-gradient(135deg, #46096F 0%, #df0982 100%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      backdrop-filter: saturate(180%) blur(20px);
+      background: rgba(15, 15, 15, 0.8);
+      border-bottom: 1px solid var(--dark-border);
+    }
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo img { height: 32px; width: auto; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; flex: 1; }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      cursor: pointer;
+    }
+    .nav-link:hover { color: var(--text); }
+    .nav-link.has-dropdown::after {
+      content: '▾';
+      font-size: 0.75rem;
+      transition: transform 0.2s;
+    }
+    .nav-dropdown { position: relative; }
+    .dropdown-content {
+      position: absolute;
+      top: calc(100% + 1rem);
+      left: 0;
+      background: rgba(26, 26, 26, 0.98);
+      backdrop-filter: saturate(180%) blur(20px);
+      border: 1px solid var(--dark-border);
+      border-radius: 0.75rem;
+      padding: 0.5rem;
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+    .nav-dropdown:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .dropdown-item {
+      display: block;
+      padding: 0.65rem 1rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: all 0.2s;
+      font-size: 0.9rem;
+    }
+    .dropdown-item:hover {
+      background: rgba(70, 9, 111, 0.1);
+      color: var(--text);
+    }
+    .nav-buttons { display: flex; align-items: center; gap: 1rem; }
+    .btn {
+      padding: 0.6rem 1.25rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--dark-border);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .btn-primary {
+      background: var(--gradient);
+      color: white;
+      border: none;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(70, 9, 111, 0.4);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--dark-border);
+      color: var(--text);
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    /* Article Container */
+    .article-container {
+      padding-top: 80px;
+      min-height: 100vh;
+    }
+
+    /* Article Header */
+    .article-header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .article-category {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: rgba(70, 9, 111, 0.2);
+      border: 1px solid rgba(70, 9, 111, 0.4);
+      border-radius: 2rem;
+      color: var(--primary-light);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-title {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .article-date::before {
+      content: '📅';
+    }
+
+    .article-read-time::before {
+      content: '⏱️';
+    }
+
+    /* Featured Image */
+    .article-featured-image {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .article-featured-image img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Article Content */
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .article-content h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 2.5rem 0 1rem;
+      color: var(--text);
+    }
+
+    .article-content h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 2rem 0 1rem;
+      color: var(--text);
+    }
+
+    .article-content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .article-content em {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    .article-content strong {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .article-content ul, .article-content ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+
+    .article-content li {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .article-content blockquote {
+      border-left: 4px solid var(--primary);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .article-quote {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-left: 4px solid var(--primary);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin: 2.5rem 0;
+    }
+
+    .article-quote p {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--text);
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+
+    .article-quote-author {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      font-style: normal;
+    }
+
+    /* Author Section */
+    .article-author {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .author-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--gradient);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    .author-info h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-info p {
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .author-title {
+      color: var(--primary-light);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Share Section */
+    .article-share {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .share-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .share-btn:hover {
+      background: rgba(70, 9, 111, 0.1);
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    /* Back to Blog Button */
+    .back-to-blog {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 1px solid var(--dark-border);
+      border-radius: 0.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateX(-4px);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, 
+          rgba(70, 9, 111, 0.95) 0%,
+          rgba(138, 5, 200, 0.9) 25%,
+          rgba(223, 9, 130, 0.9) 50%,
+          rgba(138, 5, 200, 0.9) 75%,
+          rgba(70, 9, 111, 0.95) 100%);
+      background-size: 200% 200%;
+      animation: footerGradient 15s ease infinite;
+      color: white;
+      padding: 3rem 0 1.5rem;
+      position: relative;
+      overflow: hidden;
+      margin-top: 4rem;
+    }
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: radial-gradient(ellipse at center, 
+          rgba(223, 9, 130, 0.15) 0%, 
+          transparent 50%);
+      animation: footerShine 10s linear infinite;
+    }
+    @keyframes footerGradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes footerShine {
+      from { transform: translateX(0); }
+      to { transform: translateX(50%); }
+    }
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .footer-brand p { 
+      margin-top: 1rem; 
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+    }
+    .footer-section h3 { 
+      margin-bottom: 1rem; 
+      font-weight: 700;
+    }
+    .footer-links { 
+      list-style: none; 
+    }
+    .footer-links li { 
+      margin-bottom: 0.75rem; 
+    }
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { 
+      color: white; 
+    }
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .social-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    .social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .scroll-to-top {
+      display: none;
+      background: var(--gradient);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 1.5rem auto 0;
+      box-shadow: 0 4px 12px rgba(70, 9, 111, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 1024px) {
+      .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+        margin-left: auto;
+      }
+      .nav-container {
+        gap: 0;
+      }
+
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .article-content h2 {
+        font-size: 1.5rem;
+      }
+
+      .article-content h3 {
+        font-size: 1.25rem;
+      }
+
+      .article-content p,
+      .article-content li {
+        font-size: 1rem;
+      }
+
+      .author-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      footer {
+        padding: 2rem 0 1rem;
+      }
+
+      .scroll-to-top {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../Media/qBraid Logo.png" alt="qBraid" />
+      </a>
+      
+      <div class="nav-links">
+        <div class="nav-dropdown">
+          <span class="nav-link has-dropdown">Products</span>
+          <div class="dropdown-content">
+            <a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
+            <a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a>
+            <a href="../qbook.html" class="dropdown-item">qBook</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-link has-dropdown">Solutions</span>
+          <div class="dropdown-content">
+            <a href="../enterprise.html" class="dropdown-item">Enterprise</a>
+            <a href="../pilots.html" class="dropdown-item">Developers</a>
+            <a href="../quantum-companies.html" class="dropdown-item">Quantum Companies</a>
+            <a href="../education.html" class="dropdown-item">Educators</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <span class="nav-link has-dropdown">Resources</span>
+          <div class="dropdown-content">
+            <a href="https://docs.qbraid.com" class="dropdown-item">Docs</a>
+            <a href="https://sdk.qbraid.com" class="dropdown-item">SDK</a>
+            <a href="../blog.html" class="dropdown-item">Blog</a>
+            <a href="../about.html" class="dropdown-item">About</a>
+          </div>
+        </div>
+        <a href="../pricing.html" class="nav-link">Pricing</a>
+      </div>
+      
+      <div class="nav-buttons">
+        <a href="https://account.qbraid.com/" class="btn btn-secondary">Log In</a>
+        <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Article Container -->
+  <article class="article-container">
+    <!-- Article Header -->
+    <header class="article-header">
+      <span class="article-category">Press Releases</span>
+      <h1 class="article-title">qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem</h1>
+      <div class="article-meta">
+        <span class="article-meta-item article-date">September 11, 2025</span>
+        <span class="article-meta-item article-read-time">2 min read</span>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="article-featured-image">
+      <img src="../Media/blog/nsf-grant-header.jpg" alt="NSF Grant Award" onerror="this.style.display='none'">
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-content">
+      <h2>qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem</h2>
+      
+      <p><em>Chicago, IL – September 2025</em> – qBraid, a leading platform for quantum software and cloud solutions, has been awarded a <strong>$300,000 Phase I grant</strong> from the National Science Foundation's <strong>Pathways to Enable Open-Source Ecosystems (POSE)</strong> program to support the growth of the qBraid-SDK.</p>
+
+      <p>The qBraid-SDK is a hardware-agnostic, open-source runtime and middleware framework that unifies how developers interact with quantum hardware. Today, the quantum software landscape is fragmented by proprietary stacks and vendor-specific tools. By reducing technical barriers and promoting interoperability, the SDK provides a common foundation for experimentation, reproducibility, and innovation across the ecosystem. Its open-source model ensures transparency and invites contributions from academia, startups, and industry alike.</p>
+
+      <p>Through NSF support Award #2516923, qBraid will:</p>
+
+      <ul>
+        <li>Formalize governance structures and community practices to sustain long-term growth.</li>
+        <li>Expand the contributor base, building on today's interoperability across 25+ devices and 20+ frameworks, and fueling further growth in accessible hardware and software support.</li>
+        <li>Extend upward into algorithm layers, adding support for parameterized circuits, batch execution, hybrid workloads, and HPC integration to accelerate development of useful quantum applications.</li>
+        <li>Strengthen contributor infrastructure, CI/CD pipelines, community tools, and onboarding resources.</li>
+      </ul>
+
+      <div class="article-quote">
+        <p>"Open-source collaboration is essential for scaling the quantum computing ecosystem. The NSF POSE program provides us with the resources to strengthen qBraid-SDK's role as a platform-agnostic runtime framework, enabling quantum hardware providers and software developers to connect more easily and accelerate innovation."</p>
+        <div class="article-quote-author">— Ryan Hill, CTO of qBraid</div>
+      </div>
+
+      <p>The project is led by <strong>Ryan Hill (PI)</strong>, with support from <strong>Ricky Young, Dr. Kenneth Heitritter, and Dr. Tarini Hardikar</strong>, and includes collaborations with <strong>Q-CTRL, QuEra, and Oxford Quantum Circuits</strong>.</p>
+    </div>
+
+    <!-- Author Section -->
+    <div class="article-author">
+      <div class="author-card">
+        <div class="author-avatar">RH</div>
+        <div class="author-info">
+          <h3>Ryan Hill</h3>
+          <p class="author-title">CTO</p>
+          <p>Ryan Hill is the Chief Technology Officer at qBraid, leading the development of the platform's quantum computing infrastructure.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Section -->
+    <div class="article-share">
+      <div class="share-title">Share this article</div>
+      <div class="share-buttons">
+        <a href="https://twitter.com/intent/tweet?url=https://qbraid.com/blog-posts/nsf-grant-2025&text=qBraid%20Awarded%20NSF%20Grant" target="_blank" class="share-btn">
+          🐦 Twitter
+        </a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://qbraid.com/blog-posts/nsf-grant-2025" target="_blank" class="share-btn">
+          💼 LinkedIn
+        </a>
+        <a href="mailto:?subject=qBraid%20Awarded%20NSF%20Grant&body=Check%20out%20this%20article:%20https://qbraid.com/blog-posts/nsf-grant-2025" class="share-btn">
+          ✉️ Email
+        </a>
+      </div>
+    </div>
+
+    <!-- Back to Blog -->
+    <div class="back-to-blog">
+      <a href="../blog.html" class="back-btn">← Back to Blog</a>
+    </div>
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>qBraid</h3>
+        <p>The One-Stop Quantum Computing Platform</p>
+      </div>
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul class="footer-links">
+          <li><a href="../qbraid-lab.html">qBraid Lab</a></li>
+          <li><a href="../qbraid-os.html">qBraid OS</a></li>
+          <li><a href="../qbook.html">qBook</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul class="footer-links">
+          <li><a href="../enterprise.html">Enterprise</a></li>
+          <li><a href="../pilots.html">Developers</a></li>
+          <li><a href="../quantum-companies.html">Quantum Companies</a></li>
+          <li><a href="../education.html">Educators</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="https://docs.qbraid.com">Docs</a></li>
+          <li><a href="https://sdk.qbraid.com">SDK</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="../careers.html">Careers</a></li>
+          <li><a href="../pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 qBraid. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://github.com/qbraid" class="social-link" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/company/qbraid-official" class="social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">↑</button>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const navButtons = document.querySelector('.nav-buttons');
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        navButtons.style.display = navButtons.style.display === 'flex' ? 'none' : 'flex';
+      });
+    }
+  </script>
+</body>
+</html>
+
