@@ -377,7 +377,8 @@
       100% { transform: translateX(-50%); }
     }
 
-    .component-card {
+    .component-card,
+    .benefit-card {
       background: var(--dark-card);
       border: 1px solid var(--dark-border);
       border-radius: 1.5rem;
@@ -387,7 +388,8 @@
       overflow: hidden;
     }
 
-    .component-card::before {
+    .component-card::before,
+    .benefit-card::before {
       content: '';
       position: absolute;
       top: 0;
@@ -399,13 +401,15 @@
       transition: opacity 0.3s;
     }
 
-    .component-card:hover {
-      border-color: rgba(70, 9, 111, 0.6);
+    .component-card:hover,
+    .benefit-card:hover {
+      border-color: rgba(70, 9, 111, 0.8);
       transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.36);
     }
 
-    .component-card:hover::before {
+    .component-card:hover::before,
+    .benefit-card:hover::before {
       opacity: 1;
     }
 
@@ -457,38 +461,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
-    }
-
-    .benefit-card {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .benefit-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: var(--gradient);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-
-    .benefit-card:hover {
-      border-color: rgba(70, 9, 111, 0.8);
-      transform: translateY(-4px);
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.36);
-    }
-
-    .benefit-card:hover::before {
-      opacity: 1;
     }
 
     .benefit-card {
