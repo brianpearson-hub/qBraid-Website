@@ -19,6 +19,24 @@
     }
     ,
     {
+      "id": "nvidia-ai4quantum-2025",
+      "title": "Nvidia and qBraid democratize AI4Quantum",
+      "slug": "nvidia-and-qbraid-democratize-ai4quantum",
+      "date": "2025-06-12",
+      "author": {
+        "name": "Kenneth Heitritter",
+        "title": "Vice President of R&D",
+        "image": "Team Headshots/Kenny.png",
+        "bio": "Kenny leads R&D at qBraid, advancing quantum-classical workflows and GPU-accelerated quantum research."
+      },
+      "category": "Press Releases",
+      "readTime": "10",
+      "excerpt": "qBraid and NVIDIA CUDA-Q are removing the two biggest blockers to AI4Quantum research.",
+      "featuredImage": "Media/blog/nvidia-ai4quantum-header.jpg",
+      "content": "blog-posts/nvidia-and-qbraid-democratize-ai4quantum.html"
+    }
+    ,
+    {
       "id": "gpu4quantum-2025",
       "title": "GPUs on qBraid: Early Access and the GPU4Quantum Challenge",
       "slug": "gpu4quantum",
