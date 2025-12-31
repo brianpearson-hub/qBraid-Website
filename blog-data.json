@@ -37,6 +37,24 @@
     }
     ,
     {
+      "id": "qbraid-alliance-2025",
+      "title": "qBraid Alliance unites quantum computing across universities",
+      "slug": "qbraid-alliance-unites-quantum-computing-across-universities",
+      "date": "2025-09-01",
+      "author": {
+        "name": "Kenneth Heitritter",
+        "title": "Vice President of R&D",
+        "image": "Team Headshots/Kenny.png",
+        "bio": "Kenny leads R&D at qBraid, fostering collaborations between academia and industry to grow the quantum ecosystem."
+      },
+      "category": "Press Releases",
+      "readTime": "8",
+      "excerpt": "Our first cohort of the qBraid Alliance, partnering with student organizations across leading universities.",
+      "featuredImage": "Media/blog/qbraid-alliance-header.png",
+      "content": "blog-posts/qbraid-alliance-unites-quantum-computing-across-universities.html"
+    }
+    ,
+    {
       "id": "gpu4quantum-2025",
       "title": "GPUs on qBraid: Early Access and the GPU4Quantum Challenge",
       "slug": "gpu4quantum",
