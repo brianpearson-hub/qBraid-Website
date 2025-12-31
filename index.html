@@ -794,35 +794,6 @@
       background: #000;
     }
 
-    .demo-play-btn {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      z-index: 2;
-      pointer-events: none;
-      transition: opacity 0.2s;
-    }
-
-    .demo-play-btn button {
-      pointer-events: auto;
-      background: rgba(0, 0, 0, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      color: #fff;
-      padding: 0.85rem 1.5rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1rem;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s, background 0.2s, border-color 0.2s;
-    }
-
-    .demo-play-btn button:hover {
-      transform: translateY(-2px);
-      background: rgba(223, 9, 130, 0.7);
-      border-color: rgba(223, 9, 130, 0.4);
-    }
 
     /* CTA Section */
     .section-cta {
@@ -1643,9 +1614,6 @@
   <div class="demo-overlay" id="demo-overlay" role="dialog" aria-modal="true" aria-label="Product demo video">
     <div class="demo-modal">
       <button class="demo-close" id="demo-close" aria-label="Close demo">×</button>
-      <div class="demo-play-btn" id="demo-play">
-        <button type="button">▶︎ Play with sound</button>
-      </div>
       <iframe
         class="demo-iframe"
         id="demo-iframe"
@@ -1664,31 +1632,22 @@
       const overlay = document.getElementById('demo-overlay');
       const iframe = document.getElementById('demo-iframe');
       const closeBtn = document.getElementById('demo-close');
-      const playBtnWrap = document.getElementById('demo-play');
-      const playBtn = playBtnWrap ? playBtnWrap.querySelector('button') : null;
       const DEMO_URL = 'https://www.youtube.com/embed/c2YvliEA_J4?autoplay=1&playsinline=1&controls=0&rel=0&modestbranding=1&fs=0&iv_load_policy=3';
 
       function openDemo(event) {
         event.preventDefault();
-        overlay.classList.add('active');
-        if (playBtnWrap) playBtnWrap.style.opacity = '1';
-        demoBtn.setAttribute('aria-expanded', 'true');
-      }
-
-      function startVideo() {
         iframe.src = DEMO_URL;
-        if (playBtnWrap) playBtnWrap.style.opacity = '0';
+        overlay.classList.add('active');
+        demoBtn.setAttribute('aria-expanded', 'true');
       }
 
       function closeDemo() {
         overlay.classList.remove('active');
         iframe.src = '';
-        if (playBtnWrap) playBtnWrap.style.opacity = '1';
         demoBtn.setAttribute('aria-expanded', 'false');
       }
 
       demoBtn.addEventListener('click', openDemo);
-      if (playBtn) playBtn.addEventListener('click', startVideo);
       closeBtn.addEventListener('click', closeDemo);
       overlay.addEventListener('click', (e) => {
         if (e.target === overlay) closeDemo();
