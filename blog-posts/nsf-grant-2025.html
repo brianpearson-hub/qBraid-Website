@@ -202,25 +202,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       flex-wrap: wrap;
-      color: var(--text-muted);
-      font-size: 0.95rem;
       margin-bottom: 2rem;
     }
 
     .article-meta-item {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 2rem;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s;
     }
 
-    .article-date::before {
-      content: '📅';
-    }
-
-    .article-read-time::before {
-      content: '⏱️';
+    .article-meta-item:hover {
+      border-color: rgba(70, 9, 111, 0.4);
+      background: rgba(70, 9, 111, 0.05);
     }
 
     /* Featured Image */
