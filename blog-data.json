@@ -143,6 +143,42 @@
       "featuredImage": "Media/blog/q4bio-header.jpeg",
       "content": "blog-posts/qbraid-awarded-q4bio-contract-by-wellcome-leap.html"
     }
+    ,
+    {
+      "id": "connections-podcast-2025",
+      "title": "Announcing the Launch of the qBraid Connections Podcast",
+      "slug": "announcing-the-launch-of-the-qbraid-connections-podcast",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Community & Partnerships",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Sharing voices from across the quantum ecosystem—builders, researchers, educators, and partners."
+      },
+      "category": "Collaborations",
+      "readTime": "5",
+      "excerpt": "A new podcast series highlighting quantum builders and partners shaping the ecosystem.",
+      "featuredImage": "Media/blog/connections-podcast.png",
+      "content": "blog-posts/announcing-the-launch-of-the-qbraid-connections-podcast.html"
+    }
+    ,
+    {
+      "id": "duality-cohort-2025",
+      "title": "Duality Quantum Accelerator Accepts Six Startups into Inaugural Cohort",
+      "slug": "duality-quantum-accelerator-accepts-six-startups-into-inaugural-cohort",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Press & Partnerships",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Advancing quantum startups with cloud infrastructure, multi-device access, and a thriving developer community."
+      },
+      "category": "Press Releases",
+      "readTime": "6",
+      "excerpt": "qBraid joins the first Duality cohort to accelerate quantum startups with top labs and industry partners.",
+      "featuredImage": "Media/blog/duality-cohort.webp",
+      "content": "blog-posts/duality-quantum-accelerator-accepts-six-startups-into-inaugural-cohort.html"
+    }
   ],
   "categories": [
     "All Categories",
