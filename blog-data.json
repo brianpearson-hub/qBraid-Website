@@ -17,6 +17,24 @@
       "featuredImage": "Media/blog/nsf-grant-header.jpg",
       "content": "blog-posts/nsf-grant-2025.html"
     }
+    ,
+    {
+      "id": "gpu4quantum-2025",
+      "title": "GPUs on qBraid: Early Access and the GPU4Quantum Challenge",
+      "slug": "gpu4quantum",
+      "date": "2025-09-10",
+      "author": {
+        "name": "Tarini Hardikar",
+        "title": "Head of Scientific Applications & Product",
+        "image": "Team Headshots/Tarini.png",
+        "bio": "Tarini leads scientific applications and product at qBraid, helping developers and researchers accelerate quantum workflows."
+      },
+      "category": "Product",
+      "readTime": "3",
+      "excerpt": "Supercharge your quantum workflows with GPUs on qBraid.",
+      "featuredImage": "Media/blog/gpu4quantum-header.png",
+      "content": "blog-posts/gpu4quantum.html"
+    }
   ],
   "categories": [
     "All Categories",
