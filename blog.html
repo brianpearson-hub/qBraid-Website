@@ -949,10 +949,26 @@
         });
       }
 
+      async function loadData() {
+        const urls = [
+          'blog-data.json?v=' + Date.now(),
+          './blog-data.json?v=' + Date.now()
+        ];
+        let lastErr;
+        for (const url of urls) {
+          try {
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status + ' for ' + url);
+            return await res.json();
+          } catch (e) {
+            lastErr = e;
+          }
+        }
+        throw lastErr || new Error('Unknown fetch error');
+      }
+
       try {
-        const res = await fetch('blog-data.json?v=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) throw new Error('HTTP ' + res.status);
-        const data = await res.json();
+        const data = await loadData();
         const categories = data.categories || ['All Categories'];
         const posts = (data.posts || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
 
