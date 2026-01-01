@@ -904,28 +904,62 @@
   </footer>
 
   <script>
-    (function() {
-      const buttons = Array.from(document.querySelectorAll('.filter-pill'));
-      const cards = Array.from(document.querySelectorAll('.blog-card'));
+    (async function() {
+      const filtersEl = document.querySelector('.filters');
+      const gridEl = document.querySelector('.blog-grid');
 
-      function applyFilter(category) {
-        buttons.forEach(btn => {
-          const isActive = btn.textContent.trim() === category;
-          btn.classList.toggle('active', isActive);
-          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-        });
-
-        cards.forEach(card => {
-          const badge = card.querySelector('.badge');
-          const cardCategory = badge ? badge.textContent.trim() : '';
-          const match = category === 'All Categories' || cardCategory === category;
-          card.classList.toggle('hidden', !match);
+      function renderFilters(categories, onSelect) {
+        filtersEl.innerHTML = '';
+        categories.forEach(cat => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'filter-pill';
+          btn.textContent = cat;
+          btn.addEventListener('click', () => onSelect(cat));
+          filtersEl.appendChild(btn);
         });
       }
 
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => applyFilter(btn.textContent.trim()));
-      });
+      function renderCards(posts, category) {
+        gridEl.innerHTML = '';
+        posts
+          .filter(post => category === 'All Categories' || post.category === category)
+          .forEach(post => {
+            const card = document.createElement('article');
+            card.className = 'blog-card';
+            card.innerHTML = `
+              <a href="${post.content}" class="card-image">
+                <img src="${post.featuredImage}" alt="${post.title}">
+              </a>
+              <div class="card-meta">
+                <span class="badge">${post.category}</span>
+                <span>${post.readTime} min read</span>
+              </div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <a class="read-more" href="${post.content}">Read more →</a>
+            `;
+            gridEl.appendChild(card);
+          });
+
+        Array.from(filtersEl.children).forEach(btn => {
+          const isActive = btn.textContent === category;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      }
+
+      try {
+        const res = await fetch('blog-data.json', { cache: 'no-cache' });
+        const data = await res.json();
+        const categories = data.categories || ['All Categories'];
+        const posts = (data.posts || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        renderFilters(categories, (cat) => renderCards(posts, cat));
+        renderCards(posts, 'All Categories');
+      } catch (err) {
+        console.error('Failed to load blog data', err);
+      }
     })();
   </script>
 </body>
