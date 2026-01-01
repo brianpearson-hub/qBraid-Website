@@ -950,7 +950,8 @@
       }
 
       try {
-        const res = await fetch('blog-data.json', { cache: 'no-cache' });
+        const res = await fetch('blog-data.json?v=' + Date.now(), { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
         const categories = data.categories || ['All Categories'];
         const posts = (data.posts || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -959,6 +960,7 @@
         renderCards(posts, 'All Categories');
       } catch (err) {
         console.error('Failed to load blog data', err);
+        gridEl.innerHTML = '<p style="color:#fff;opacity:0.8;">Unable to load blog posts right now. Please refresh.</p>';
       }
     })();
   </script>
