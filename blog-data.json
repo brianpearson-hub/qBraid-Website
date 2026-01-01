@@ -179,6 +179,78 @@
       "featuredImage": "Media/blog/duality-cohort.webp",
       "content": "blog-posts/duality-quantum-accelerator-accepts-six-startups-into-inaugural-cohort.html"
     }
+    ,
+    {
+      "id": "cuda-quantum-2025",
+      "title": "Unleashing the Power of NVIDIA CUDA Quantum with qBraid",
+      "slug": "unleashing-the-power-of-nvidia-cuda-quantum-with-qbraid",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Delivering unified developer tooling, runtime, and cloud connectivity across quantum and GPU platforms."
+      },
+      "category": "Product",
+      "readTime": "6",
+      "excerpt": "Pair CUDA Quantum on GH200 with qBraid’s multi-backend platform for hybrid research.",
+      "featuredImage": "Media/blog/cuda-quantum.png",
+      "content": "blog-posts/unleashing-the-power-of-nvidia-cuda-quantum-with-qbraid.html"
+    }
+    ,
+    {
+      "id": "xanadu-custom-env-2025",
+      "title": "qBraid Provides Custom Notebook Environment for Xanadu",
+      "slug": "qbraid-provides-custom-notebook-environment-for-xanadu",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Hackathons & Community",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Powering quantum hackathons and challenges with turnkey environments and cloud access."
+      },
+      "category": "Hackathons",
+      "readTime": "5",
+      "excerpt": "Delivering a premier QHack experience with preloaded SDKs and scalable notebooks on qBraid Lab.",
+      "featuredImage": "Media/blog/xanadu-custom-env.png",
+      "content": "blog-posts/qbraid-provides-custom-notebook-environment-for-xanadu.html"
+    }
+    ,
+    {
+      "id": "qchack-highlights-2025",
+      "title": "QCHack highlights and the release of qBraid SDK",
+      "slug": "qchack-highlights-and-the-release-of-qbraid-sdk",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Hackathons & Community",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Fueling quantum builders with ready-to-run environments, mentorship, and multi-device access."
+      },
+      "category": "Hackathons",
+      "readTime": "5",
+      "excerpt": "Recapping QCHack’s talks, mentorship, hackathon, and the launch of qBraid SDK.",
+      "featuredImage": "Media/blog/qchack-highlights.png",
+      "content": "blog-posts/qchack-highlights-and-the-release-of-qbraid-sdk.html"
+    }
+    ,
+    {
+      "id": "nyuad-hackathon-2025",
+      "title": "NYUAD Hackathon for Social Good highlights",
+      "slug": "nyuad-hackathon-for-social-good-highlights",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Hackathons & Community",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Empowering hackathon teams with turnkey cloud environments and multi-device quantum access."
+      },
+      "category": "Hackathons",
+      "readTime": "6",
+      "excerpt": "How qBraid powered the NYUAD Hackathon for Social Good with quantum tools and support.",
+      "featuredImage": "Media/blog/nyuad-hackathon.jpeg",
+      "content": "blog-posts/nyuad-hackathon-for-social-good-highlights.html"
+    }
   ],
   "categories": [
     "All Categories",
