@@ -319,12 +319,16 @@
       min-height: 160px;
       position: relative;
       overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
     }
     .feature-row .feature-card::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12));
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
@@ -334,10 +338,10 @@
       margin-bottom: 0.5rem;
     }
     .feature-row .feature-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.16);
       box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
-      border-color: rgba(223, 9, 130, 0.35);
-      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+      background: var(--dark-card);
     }
     .feature-row .feature-card:hover::before {
       opacity: 1;
