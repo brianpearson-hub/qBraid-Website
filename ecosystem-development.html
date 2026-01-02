@@ -151,6 +151,51 @@
     .feature-row:hover .feature-visual { transform: translateY(-6px); border-color: rgba(223, 9, 130, 0.35); box-shadow: 0 34px 64px rgba(0, 0, 0, 0.4); background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08)); }
     .feature-row:hover .feature-visual img { transform: translateY(-4px) scale(1.02); }
 
+    /* Ecosystem grid cards */
+    .ecosystem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+    @media (max-width: 960px) {
+      .ecosystem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .ecosystem-grid { grid-template-columns: 1fr; }
+    }
+    .ecosystem-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 1.2rem;
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 200px;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .ecosystem-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .ecosystem-card h3 { margin: 0; font-size: 1.2rem; font-weight: 800; color: #fff; }
+    .ecosystem-card p { margin: 0; color: var(--text-muted); line-height: 1.7; }
+    .ecosystem-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(223, 9, 130, 0.35);
+      box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+    }
+    .ecosystem-card:hover::before { opacity: 1; }
+
     .features-section { position: relative; background: var(--dark); overflow: hidden; width: 100%; padding: 6rem 0; }
     .features-section::before {
       content: '';
@@ -636,66 +681,31 @@
         </p>
       </div>
 
-      <div class="feature-rows">
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Custom Curriculum</h3>
-            <p>Tailored learning paths aligned to your industries and partners-foundations, advanced algorithms, and hardware-specific modules.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/qbook.png" alt="Custom curriculum">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Workforce Pipeline</h3>
-            <p>Design a talent funnel from awareness to employability with labs, capstones, and job-ready projects on real quantum hardware.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/LaunchLab1.png" alt="Workforce pipeline">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Analytics & Insights</h3>
-            <p>Track engagement, skill progression, and placement outcomes with dashboarding built for ecosystem stakeholders.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/Access1.png" alt="Analytics and insights">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Education Platform</h3>
-            <p>Provide learners with a managed quantum IDE, pre-built environments, and guided labs-no installs required.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/qbraidAI.png" alt="Education platform">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Hackathons & Challenges</h3>
-            <p>Engage learners with instructor-led hackathons, industry challenges, and rapid prototyping events tailored to your ecosystem.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/Access1.png" alt="Hackathons and challenges">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Partner Enablement</h3>
-            <p>Onboard universities, research labs, and industry partners with co-branded tracks, marketing support, and shared success metrics.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/LaunchLab1.png" alt="Partner enablement">
-          </div>
-        </div>
+      <div class="ecosystem-grid">
+        <article class="ecosystem-card">
+          <h3>Custom Curriculum</h3>
+          <p>Tailored learning paths aligned to your industries and partners-foundations, advanced algorithms, and hardware-specific modules.</p>
+        </article>
+        <article class="ecosystem-card">
+          <h3>Workforce Pipeline</h3>
+          <p>Design a talent funnel from awareness to employability with labs, capstones, and job-ready projects on real quantum hardware.</p>
+        </article>
+        <article class="ecosystem-card">
+          <h3>Analytics & Insights</h3>
+          <p>Track engagement, skill progression, and placement outcomes with dashboarding built for ecosystem stakeholders.</p>
+        </article>
+        <article class="ecosystem-card">
+          <h3>Education Platform</h3>
+          <p>Provide learners with a managed quantum IDE, pre-built environments, and guided labs-no installs required.</p>
+        </article>
+        <article class="ecosystem-card">
+          <h3>Hackathons & Challenges</h3>
+          <p>Engage learners with instructor-led hackathons, industry challenges, and rapid prototyping events tailored to your ecosystem.</p>
+        </article>
+        <article class="ecosystem-card">
+          <h3>Partner Enablement</h3>
+          <p>Onboard universities, research labs, and industry partners with co-branded tracks, marketing support, and shared success metrics.</p>
+        </article>
       </div>
     </div>
   </section>
