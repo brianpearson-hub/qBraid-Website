@@ -191,9 +191,30 @@
       gap: 1.25rem;
       min-height: 260px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .case-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
     }
     .case-card--offset {
       margin-top: 1.2rem;
+    }
+    .case-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(223, 9, 130, 0.35);
+      box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+    }
+    .case-card:hover::before {
+      opacity: 1;
     }
     .case-logo {
       display: flex;
