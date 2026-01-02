@@ -189,29 +189,30 @@
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
-      min-height: 260px;
+      min-height: 280px;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
       justify-content: space-between;
       position: relative;
       overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
     }
     .case-card::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12));
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient);
       opacity: 0;
       transition: opacity 0.3s ease;
       pointer-events: none;
     }
-    .case-card--offset {
-      margin-top: 1.2rem;
-    }
     .case-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(223, 9, 130, 0.35);
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.16);
       box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
-      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+      background: var(--dark-card);
     }
     .case-card:hover::before {
       opacity: 1;
@@ -597,7 +598,7 @@
           </div>
         </article>
 
-        <article class="case-card case-card--offset">
+        <article class="case-card">
           <div class="case-logo">
             <img src="logos/NCAT.png" alt="NCAT" style="max-height: 70px;">
           </div>
