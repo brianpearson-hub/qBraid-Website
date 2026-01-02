@@ -251,6 +251,71 @@
       "featuredImage": "Media/blog/nyuad-hackathon.jpeg",
       "content": "blog-posts/nyuad-hackathon-for-social-good-highlights.html"
     }
+    ,
+    {
+      "id": "qiskit-summer-school-2025",
+      "title": "qBraid to Host IBM’s Qiskit Global Summer School 2025",
+      "slug": "qiskit-global-summer-school-2025",
+      "date": "2025-12-01",
+      "author": { "name": "qBraid Team", "title": "Education", "image": "Media/qBraid Logo.png", "bio": "Providing turnkey quantum education environments and curriculum support." },
+      "category": "Collaborations",
+      "readTime": "4",
+      "excerpt": "qBraid is the preferred JupyterLab platform for Qiskit Global Summer School 2025 with ready-to-run environments.",
+      "featuredImage": "Media/blog/qbraid-alliance-header.png",
+      "content": "blog-posts/qiskit-global-summer-school-2025.html"
+    }
+    ,
+    {
+      "id": "quera-advantages-cloud-2025",
+      "title": "[Partner Post] QuEra: Advantages of Cloud-Based Quantum Computing",
+      "slug": "quera-advantages-of-cloud-based-quantum-computing",
+      "date": "2025-12-01",
+      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "category": "Collaborations",
+      "readTime": "5",
+      "excerpt": "Cloud-based access to QuEra neutral-atom devices through qBraid accelerates research and enterprise adoption.",
+      "featuredImage": "Media/blog/qchack-highlights.png",
+      "content": "blog-posts/quera-advantages-of-cloud-based-quantum-computing.html"
+    }
+    ,
+    {
+      "id": "quera-top-apps-2025",
+      "title": "[Partner Post] QuEra: Top Applications of Quantum Computing for Enterprises",
+      "slug": "quera-top-applications-for-enterprises",
+      "date": "2025-12-01",
+      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "category": "Collaborations",
+      "readTime": "5",
+      "excerpt": "Enterprise use cases for neutral-atom quantum computing delivered through qBraid.",
+      "featuredImage": "Media/blog/amazon-braket-sdk-header.png",
+      "content": "blog-posts/quera-top-applications-for-enterprises.html"
+    }
+    ,
+    {
+      "id": "quera-aquila-braket-2025",
+      "title": "qBraid & QuEra: Access to Aquila on Amazon Braket",
+      "slug": "qbraid-and-quera-aquila-on-amazon-braket",
+      "date": "2025-12-01",
+      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "category": "Collaborations",
+      "readTime": "5",
+      "excerpt": "Run on QuEra’s 256-qubit Aquila via Amazon Braket with qBraid’s unified tooling and analytics.",
+      "featuredImage": "Media/blog/q4bio-header.jpeg",
+      "content": "blog-posts/qbraid-and-quera-aquila-on-amazon-braket.html"
+    }
+    ,
+    {
+      "id": "pasqal-pulser-2025",
+      "title": "Pulser, Pasqal’s quantum SDK, is available on qBraid Lab",
+      "slug": "pasqal-pulser-available-on-qbraid-lab",
+      "date": "2025-12-01",
+      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "category": "Collaborations",
+      "readTime": "4",
+      "excerpt": "Spin up Pulser in minutes on qBraid Lab to program neutral atom quantum computers.",
+      "featuredImage": "Media/blog/pasqal-placeholder.png",
+      "content": "blog-posts/pasqal-pulser-available-on-qbraid-lab.html"
+    }
   ],
   "categories": [
     "All Categories",
