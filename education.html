@@ -314,10 +314,30 @@
       color: var(--text-muted);
       box-shadow: 0 20px 50px rgba(0,0,0,0.3);
       min-height: 160px;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-row .feature-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
     }
     .feature-row .feature-card h3 {
       color: var(--text);
       margin-bottom: 0.5rem;
+    }
+    .feature-row .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
+      border-color: rgba(223, 9, 130, 0.35);
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+    }
+    .feature-row .feature-card:hover::before {
+      opacity: 1;
     }
 
     .features-section {
@@ -1048,24 +1068,24 @@
       </div>
 
       <div class="feature-rows">
-        <div class="feature-row">
-          <div class="feature-card">
-            <h3>Instant Setup</h3>
-            <p>Get participants coding in minutes with pre-configured environments and quantum hardware access.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Competition Ready</h3>
-            <p>Built-in tools for team collaboration, project submission, and judging workflows.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Global Access</h3>
-            <p>Run virtual or hybrid hackathons with participants from around the world, all through the browser.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Talent Pipeline</h3>
-              <p>Hackathons surface top talent and create a direct bridge between discovery and collaboration.</p>
-          </div>
+      <div class="feature-row hackathon-grid">
+        <div class="feature-card animated-card">
+          <h3>Instant Setup</h3>
+          <p>Get participants coding in minutes with pre-configured environments and quantum hardware access.</p>
         </div>
+        <div class="feature-card animated-card">
+          <h3>Competition Ready</h3>
+          <p>Built-in tools for team collaboration, project submission, and judging workflows.</p>
+        </div>
+        <div class="feature-card animated-card">
+          <h3>Global Access</h3>
+          <p>Run virtual or hybrid hackathons with participants from around the world, all through the browser.</p>
+        </div>
+        <div class="feature-card animated-card">
+          <h3>Talent Pipeline</h3>
+          <p>Hackathons surface top talent and create a direct bridge between discovery and collaboration.</p>
+        </div>
+      </div>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;">
