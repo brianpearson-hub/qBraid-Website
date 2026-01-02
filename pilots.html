@@ -437,6 +437,17 @@
       gap: 1.25rem;
       min-height: 280px;
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .case-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
     }
 
     .case-logo {
@@ -492,6 +503,9 @@
       border-color: rgba(223, 9, 130, 0.35);
       box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
       background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+    }
+    .case-card:hover::before {
+      opacity: 1;
     }
 
     .cta-section {
