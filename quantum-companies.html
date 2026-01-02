@@ -119,6 +119,45 @@
     .feature-row:hover .feature-visual { transform: translateY(-6px); border-color: rgba(223, 9, 130, 0.35); box-shadow: 0 34px 64px rgba(0, 0, 0, 0.4); background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08)); }
     .feature-row:hover .feature-visual img { transform: translateY(-4px) scale(1.02); }
 
+    /* Network cards (side-by-side) */
+    .network-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .network-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 1.2rem;
+      padding: 1.75rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 200px;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .network-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .network-card h3 { margin: 0; font-size: 1.2rem; font-weight: 800; color: #fff; }
+    .network-card p { margin: 0; color: var(--text-muted); line-height: 1.7; }
+    .network-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(223, 9, 130, 0.35);
+      box-shadow: 0 28px 58px rgba(0, 0, 0, 0.4);
+      background: linear-gradient(135deg, rgba(223, 9, 130, 0.08), rgba(70, 9, 111, 0.08));
+    }
+    .network-card:hover::before { opacity: 1; }
+
     .features-section { position: relative; background: var(--dark); overflow: hidden; width: 100%; padding: 6rem 0; }
     .features-section::before {
       content: '';
@@ -757,66 +796,31 @@
         </p>
       </div>
 
-      <div class="feature-rows">
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Global Distribution</h3>
-            <p>Reach 25K+ users across 120 countries through qBraid's platform.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/Access1.png" alt="Global distribution">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Unified Access</h3>
-            <p>One integration to connect your hardware to multiple quantum SDKs and frameworks.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/LaunchLab1.png" alt="Unified access">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Usage Analytics</h3>
-            <p>Detailed insights into hardware utilization and user engagement.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/qbook.png" alt="Usage analytics">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Education & Research</h3>
-            <p>Engage with academic institutions and research communities worldwide.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/qbraidAI.png" alt="Education and research">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Co-Marketing</h3>
-            <p>Joint marketing opportunities and visibility in our ecosystem.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/Access1.png" alt="Co-marketing">
-          </div>
-        </div>
-
-        <div class="feature-row">
-          <div class="feature-content">
-            <h3>Technical Support</h3>
-            <p>Dedicated integration support and ongoing technical assistance.</p>
-          </div>
-          <div class="feature-visual">
-            <img src="Media/LaunchLab1.png" alt="Technical support">
-          </div>
-        </div>
+      <div class="network-grid">
+        <article class="network-card">
+          <h3>Global Distribution</h3>
+          <p>Reach 25K+ users across 120 countries through qBraid's platform.</p>
+        </article>
+        <article class="network-card">
+          <h3>Unified Access</h3>
+          <p>One integration to connect your hardware to multiple quantum SDKs and frameworks.</p>
+        </article>
+        <article class="network-card">
+          <h3>Usage Analytics</h3>
+          <p>Detailed insights into hardware utilization and user engagement.</p>
+        </article>
+        <article class="network-card">
+          <h3>Education & Research</h3>
+          <p>Engage with academic institutions and research communities worldwide.</p>
+        </article>
+        <article class="network-card">
+          <h3>Co-Marketing</h3>
+          <p>Joint marketing opportunities and visibility in our ecosystem.</p>
+        </article>
+        <article class="network-card">
+          <h3>Technical Support</h3>
+          <p>Dedicated integration support and ongoing technical assistance.</p>
+        </article>
       </div>
     </div>
   </section>
