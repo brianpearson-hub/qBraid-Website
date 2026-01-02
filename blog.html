@@ -1161,7 +1161,13 @@
           }
         }
         const categories = data.categories || ['All Categories'];
-        const posts = (data.posts || []).slice().sort((a, b) => new Date(b.date) - new Date(a.date));
+        const posts = (data.posts || []).map((p, idx) => ({ ...p, __idx: idx }))
+          .sort((a, b) => {
+            const ad = new Date(a.date || 0).getTime() || 0;
+            const bd = new Date(b.date || 0).getTime() || 0;
+            if (bd !== ad) return bd - ad;
+            return b.__idx - a.__idx;
+          });
 
         renderFilters(categories, (cat) => renderCards(posts, cat));
         renderCards(posts, 'All Categories');
