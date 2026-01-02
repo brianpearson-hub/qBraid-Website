@@ -316,6 +316,132 @@
       "featuredImage": "Media/blog/pasqal-placeholder.png",
       "content": "blog-posts/pasqal-pulser-available-on-qbraid-lab.html"
     }
+    ,
+    {
+      "id": "qai-institute-2025",
+      "title": "qBraid partners with Quantum Algorithms Institute",
+      "slug": "qbraid-partners-with-quantum-algorithms-institute",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Collaborations",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Driving partnerships and community programs across education and research."
+      },
+      "category": "Collaborations",
+      "readTime": "4",
+      "excerpt": "Strengthening the Pacific Northwest ecosystem with joint labs, training, and research pilots.",
+      "featuredImage": "Media/blog/qai-partner.jpeg",
+      "content": "blog-posts/qbraid-partners-with-quantum-algorithms-institute.html"
+    }
+    ,
+    {
+      "id": "ieee-award-2025",
+      "title": "qBraid’s Wins 1st for the Best Quantum Algorithm Paper Award at IEEE",
+      "slug": "qbraids-wins-1st-for-the-best-quantum-algorithm-paper-award-at-ieee-qce-2023",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Spotlighting research milestones enabled by qBraid technology."
+      },
+      "category": "Research",
+      "readTime": "5",
+      "excerpt": "IEEE honored qBraid’s hybrid quantum-classical algorithm work with a Best Paper Award at QCE 2023.",
+      "featuredImage": "Media/blog/ieee-award.jpeg",
+      "content": "blog-posts/qbraids-wins-1st-for-the-best-quantum-algorithm-paper-award-at-ieee-qce-2023.html"
+    }
+    ,
+    {
+      "id": "flight-optimization-2025",
+      "title": "Quantum Computing for Flight Trajectory Optimization",
+      "slug": "quantum-computing-for-flight-trajectory-optimization",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Translating hybrid algorithms into actionable workflows for researchers."
+      },
+      "category": "Research",
+      "readTime": "5",
+      "excerpt": "Hybrid quantum-classical pipelines search for fuel-efficient flight paths on qBraid’s platform.",
+      "featuredImage": "Media/blog/flight-cockpit.png",
+      "content": "blog-posts/quantum-computing-for-flight-trajectory-optimization.html"
+    }
+    ,
+    {
+      "id": "vqc-benchmark-2025",
+      "title": "Benchmarking variational quantum circuits with permutation symmetry",
+      "slug": "benchmarking-variational-quantum-circuits-with-permutation-symmetry",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Analyzing how circuit structure affects execution on diverse hardware."
+      },
+      "category": "Research",
+      "readTime": "4",
+      "excerpt": "Permutation-symmetric ansätze reduce parameters while showing different hardware trade-offs on qBraid.",
+      "featuredImage": "Media/blog/arxiv-bg.jpeg",
+      "content": "blog-posts/benchmarking-variational-quantum-circuits-with-permutation-symmetry.html"
+    }
+    ,
+    {
+      "id": "power-flows-2025",
+      "title": "Quantum Power Flows: From Theory to Practice",
+      "slug": "quantum-power-flows-from-theory-to-practice",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Focused on applying quantum models to real-world engineering challenges."
+      },
+      "category": "Research",
+      "readTime": "5",
+      "excerpt": "Quantum-assisted simulations model power grid flows to inform stability and resource allocation.",
+      "featuredImage": "Media/blog/arxiv-bg.jpeg",
+      "content": "blog-posts/quantum-power-flows-from-theory-to-practice.html"
+    }
+    ,
+    {
+      "id": "truncation-effects-2025",
+      "title": "Estimating truncation effects of quantum bosonic systems using sampling algorithms",
+      "slug": "estimating-truncation-effects-of-quantum-bosonic-systems-using-sampling-algorithms",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Experimenting with classical sampling to bound quantum simulation errors."
+      },
+      "category": "Research",
+      "readTime": "5",
+      "excerpt": "Classical sampling (MCMC) estimates truncation errors in simulated bosonic systems, easing resource planning.",
+      "featuredImage": "Media/blog/arxiv-bg.jpeg",
+      "content": "blog-posts/estimating-truncation-effects-of-quantum-bosonic-systems-using-sampling-algorithms.html"
+    }
+    ,
+    {
+      "id": "embedding-learning-2025",
+      "title": "Embedding Learning in Hybrid Quantum-Classical Neural Networks",
+      "slug": "embedding-learning-in-hybrid-quantum-classical-neural-networks",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Research",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Advancing hybrid models with embedded classical quantum layers."
+      },
+      "category": "Research",
+      "readTime": "5",
+      "excerpt": "Embedding strategies improve convergence in hybrid quantum-classical neural networks run on qBraid.",
+      "featuredImage": "Media/blog/arxiv-bg.jpeg",
+      "content": "blog-posts/embedding-learning-in-hybrid-quantum-classical-neural-networks.html"
+    }
   ],
   "categories": [
     "All Categories",
