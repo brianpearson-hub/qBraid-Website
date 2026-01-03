@@ -456,6 +456,26 @@
       transition: opacity 0.3s;
     }
 
+    .case-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.95);
+      opacity: 0.95;
+    }
+    .case-icon svg {
+      width: 46px;
+      height: 46px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .case-logo {
       display: flex;
       align-items: center;
@@ -1081,21 +1101,56 @@
 
       <div class="case-grid">
         <article class="case-card">
+          <div class="case-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <circle cx="21" cy="21" r="9"></circle>
+              <line x1="28" y1="28" x2="38" y2="38"></line>
+              <circle cx="21" cy="21" r="3"></circle>
+            </svg>
+          </div>
             <h3>Use Case Discovery</h3>
             <p>Identify high-value quantum use cases specific to your industry and business objectives.</p>
         </article>
 
         <article class="case-card">
+          <div class="case-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="M18 6v10l-8 14a8 8 0 0 0 7 12h14a8 8 0 0 0 7-12l-8-14V6"></path>
+              <path d="M16 22h16"></path>
+              <path d="M14 28h20"></path>
+            </svg>
+          </div>
             <h3>Proof of Concept</h3>
             <p>Rapid prototyping and testing to validate quantum advantage for your application.</p>
         </article>
 
         <article class="case-card">
+          <div class="case-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="M20 28l8-8"></path>
+              <path d="M18 18l12 12"></path>
+              <path d="M30 16l2 2"></path>
+              <path d="M16 30l2 2"></path>
+              <path d="M34 12l2 2"></path>
+              <path d="M12 34l2 2"></path>
+              <path d="M22 10l2 2"></path>
+              <path d="M24 12l-12 12a6 6 0 0 0 0 8l4 4a6 6 0 0 0 8 0l12-12"></path>
+            </svg>
+          </div>
           <h3>Custom Development & Deployment</h3>
           <p>Tailored quantum algorithms and applications built by our expert engineering team, with full support for deploying solutions in your production environment.</p>
         </article>
 
         <article class="case-card">
+          <div class="case-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="M24 10c8 0 14 5 14 12s-6 12-14 12S10 29 10 22"></path>
+              <path d="M10 22v-6"></path>
+              <path d="M10 16h6"></path>
+              <path d="M18 38h12"></path>
+              <path d="M24 34v8"></path>
+            </svg>
+          </div>
             <h3>Ongoing Support</h3>
             <p>Continuous optimization, maintenance, and advisory services for your quantum programs.</p>
         </article>
