@@ -413,6 +413,27 @@
       opacity: 1;
     }
 
+    .benefit-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.95);
+      opacity: 0.95;
+      margin-bottom: 0.75rem;
+    }
+    .benefit-icon svg {
+      width: 46px;
+      height: 46px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .component-icon {
       width: 56px;
       height: 56px;
@@ -1174,18 +1195,57 @@
 
       <div class="benefit-rows">
         <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <circle cx="20" cy="20" r="9"></circle>
+              <line x1="27" y1="27" x2="38" y2="38"></line>
+              <path d="M30 12l6-6"></path>
+              <path d="M36 6h6v6"></path>
+            </svg>
+          </div>
           <h3>Instant Market Access</h3>
           <p>Reach thousands of quantum researchers, developers, and enterprises through qBraid Lab's integrated platform, plus co-marketing programs that showcase your hardware through joint campaigns and case studies.</p>
         </div>
         <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="M16 16h16v16H16z"></path>
+              <path d="M20 8h8"></path>
+              <path d="M20 40h8"></path>
+              <path d="M8 20v8"></path>
+              <path d="M40 20v8"></path>
+              <path d="M20 20h8v8h-8z"></path>
+            </svg>
+          </div>
           <h3>Turnkey Integration</h3>
           <p>Deploy your devices quickly with minimal engineering overhead. We handle infrastructure, security, and scaling, so hardware partners can BYOQC (Bring Your Own Quantum Computer) and plug seamlessly into qBraid.</p>
         </div>
         <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <path d="M10 34V14"></path>
+              <path d="M10 34h28"></path>
+              <path d="M16 28V22"></path>
+              <path d="M22 28V18"></path>
+              <path d="M28 28V24"></path>
+              <path d="M34 28V16"></path>
+              <circle cx="34" cy="16" r="2"></circle>
+            </svg>
+          </div>
           <h3>Usage Analytics</h3>
           <p>Comprehensive insights into device utilization, user demographics, and application patterns, with exportable reports and alerts—all fully managed by you for your device.</p>
         </div>
         <div class="benefit-card">
+          <div class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48">
+              <circle cx="18" cy="18" r="6"></circle>
+              <circle cx="32" cy="19" r="5"></circle>
+              <path d="M6 40c2-7 22-7 24 0"></path>
+              <path d="M26 40c1.2-5 14.8-5 16 0"></path>
+              <path d="M24 24l6 6"></path>
+              <path d="M30 24l-6 6"></path>
+            </svg>
+          </div>
           <h3>Developer Ecosystem</h3>
           <p>Your devices become accessible through popular quantum SDKs including Qiskit, Cirq, and Amazon Braket, supported by samples, docs, co-maintained integrations, and exposure to 25K+ developers.</p>
         </div>
