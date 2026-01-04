@@ -124,6 +124,16 @@
       transition: transform 0.2s;
     }
 
+    /* Align plain nav items (e.g., Pricing) with dropdown items */
+    .nav-links > a.nav-link:not(.has-dropdown)::after {
+      content: '▾';
+      font-size: 0.75rem;
+      opacity: 0;
+      margin-left: 0.25rem;
+      transform: translateY(2px);
+      display: inline-block;
+    }
+
     .nav-link.has-dropdown:hover::after {
       transform: translateY(2px);
     }
@@ -478,6 +488,8 @@
 
     .social-links {
       display: flex;
+      flex-wrap: wrap;
+      row-gap: 0.75rem;
       gap: 1rem;
     }
 
@@ -904,6 +916,11 @@
               <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
             </svg>
           </a>
+          <a href="https://www.youtube.com/@qbraidofficial" class="social-link" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.498 6.186a3.007 3.007 0 0 0-2.118-2.13C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.38.511A3.007 3.007 0 0 0 .502 6.186 31.26 31.26 0 0 0 0 12a31.26 31.26 0 0 0 .502 5.814 3.007 3.007 0 0 0 2.118 2.13c1.875.511 9.38.511 9.38.511s7.505 0 9.38-.511a3.007 3.007 0 0 0 2.118-2.13A31.26 31.26 0 0 0 24 12a31.26 31.26 0 0 0-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
           <a href="https://x.com/qbraid_official" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -964,7 +981,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 qBraid. All rights reserved.</p>
+      <p>&copy; 2026 qBraid. All rights reserved.</p>
       <div class="footer-legal">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>

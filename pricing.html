@@ -118,6 +118,16 @@
       transition: transform 0.2s;
     }
 
+    /* Align plain nav items (e.g., Pricing) with dropdown items */
+    .nav-links > a.nav-link:not(.has-dropdown)::after {
+      content: '▾';
+      font-size: 0.75rem;
+      opacity: 0;
+      margin-left: 0.25rem;
+      transform: translateY(2px);
+      display: inline-block;
+    }
+
     .nav-dropdown {
       position: relative;
     }
@@ -422,14 +432,25 @@
     .price-card:hover::before { opacity: 1; }
 
     .price-card.featured {
-      border-color: rgba(223, 9, 130, 0.5);
-      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.38);
-      background: linear-gradient(135deg, rgba(223, 9, 130, 0.12), rgba(70, 9, 111, 0.12)), var(--dark-card);
+      /* Match Free/Pro styling (no pink default) */
+      border-color: var(--dark-border);
+      box-shadow: none;
+      background: var(--dark-card);
+      overflow: visible;
+    }
+
+    /* Standard plan should use the exact same hover top-bar geometry as other cards */
+    .price-card.featured::before {
+      left: 0;
+      right: 0;
+      width: auto;
+      transform: none;
+      border-radius: 0;
     }
 
     .popular-badge {
       position: absolute;
-      top: -8px;
+      top: -14px;
       left: 50%;
       transform: translateX(-50%);
       background: var(--gradient);
@@ -440,6 +461,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
+      z-index: 2;
     }
 
     .price-card h3 {
@@ -743,9 +765,109 @@
         flex-direction: column;
         text-align: center;
       }
+
+      .faq-item summary {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+      .faq-item .faq-body {
+        padding: 0 1rem 1rem;
+      }
     }
     h1, .hero h1 { color: #fff; }
   .hero .gradient-text { color: #fff; background: none; -webkit-text-fill-color: #fff; }
+
+    /* FAQ */
+    .faq-section {
+      margin: 4rem 0 2rem;
+    }
+    .faq-title {
+      text-align: center;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .faq-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .faq-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      gap: 1rem;
+    }
+    .faq-item {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+      position: relative;
+    }
+    .faq-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    .faq-item:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.32);
+    }
+    .faq-item:hover::before { opacity: 1; }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.25rem 1.25rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary .chev {
+      width: 28px;
+      height: 28px;
+      border-radius: 0.6rem;
+      border: 1px solid var(--dark-border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text);
+      flex-shrink: 0;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+    .faq-item[open] summary .chev {
+      transform: rotate(180deg);
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+    .faq-item .faq-body {
+      padding: 0 1.25rem 1.25rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+    .faq-item .faq-body a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    }
+    .faq-item .faq-body a:hover {
+      border-bottom-color: rgba(255, 255, 255, 0.45);
+    }
 </style>
 </head>
 <body>
@@ -928,6 +1050,81 @@
       </table>
     </div>
 
+    <!-- GPU Instances -->
+    <div class="gpu-table-section">
+      <h2>GPU Instances</h2>
+      <p>
+        Run GPU-accelerated simulation and quantum ML workloads in qBraid Lab. Pricing below is in <strong>credits per minute</strong>.
+        <a href="https://docs.qbraid.com/lab/user-guide/gpus" target="_blank" rel="noopener">See GPU details →</a>
+      </p>
+      <p class="sim-note">
+        Note: GPU instances are provisioned on-demand and may take up to ~15 minutes to start.
+      </p>
+
+      <div class="table-wrapper">
+        <table class="gpu-table">
+          <thead>
+            <tr>
+              <th>Instance Name</th>
+              <th>GPU Type</th>
+              <th>RAM Configuration</th>
+              <th>Credits / Min</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1xA100-40GB-SXM4</td>
+              <td>1x NVIDIA A100 40GB SXM4</td>
+              <td>40GB VRAM</td>
+              <td>2.15</td>
+            </tr>
+            <tr>
+              <td>1xH100-80GB-PCIE</td>
+              <td>1x NVIDIA H100 80GB PCIe</td>
+              <td>80GB VRAM</td>
+              <td>4.15</td>
+            </tr>
+            <tr>
+              <td>2xH100-80GB-SXM5</td>
+              <td>2x NVIDIA H100 80GB SXM5</td>
+              <td>80GB VRAM each</td>
+              <td>10.63</td>
+            </tr>
+            <tr>
+              <td>4xH100-80GB-SXM5</td>
+              <td>4x NVIDIA H100 80GB SXM5</td>
+              <td>80GB VRAM each</td>
+              <td>20.60</td>
+            </tr>
+            <tr>
+              <td>8xV100-16GB</td>
+              <td>8x NVIDIA V100 16GB</td>
+              <td>16GB VRAM each</td>
+              <td>7.33</td>
+            </tr>
+            <tr>
+              <td>8xA100-40GB-SXM4</td>
+              <td>8x NVIDIA A100 40GB SXM4</td>
+              <td>40GB VRAM each</td>
+              <td>17.20</td>
+            </tr>
+            <tr>
+              <td>8xA100-80GB-SXM4</td>
+              <td>8x NVIDIA A100 80GB SXM4</td>
+              <td>80GB VRAM each</td>
+              <td>23.87</td>
+            </tr>
+            <tr>
+              <td>8xH100-80GB-SXM5</td>
+              <td>8x NVIDIA H100 80GB SXM5</td>
+              <td>80GB VRAM each</td>
+              <td>39.87</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
     <!-- Additional Pricing Options -->
     <div class="additional-pricing">
       <div class="pricing-info-card">
@@ -954,6 +1151,73 @@
         <a href="contact.html" class="btn btn-primary">Contact Us</a>
       </div>
     </div>
+
+    <!-- FAQ -->
+    <section class="faq-section" aria-label="Pricing FAQs">
+      <h2 class="faq-title">Pricing FAQ</h2>
+      <div class="faq-grid">
+        <details class="faq-item">
+          <summary>
+            What are credits?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            Credits are the unit used for pay‑as‑you‑go usage (e.g., QPUs, simulators, and GPU instances). Rates are shown in credits per task/shot/minute depending on the resource. Credits do not expire and are transferable between members of your organization.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            How does pay‑as‑you‑go work?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            You only spend credits when you run jobs (QPU tasks, simulators, or GPU minutes). Plan tiers primarily affect development resources and collaboration features.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            What GPU options are available?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            qBraid Lab offers GPU instances including V100, A100, and H100 class GPUs in multiple configurations. See the full GPU guide in the docs:
+            <a href="https://docs.qbraid.com/lab/user-guide/gpus" target="_blank" rel="noopener">GPU documentation</a>.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Why do some devices say “Talk to us” for pricing or availability?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            Some QPUs and premium simulators require special enablement, capacity planning, or contract terms. If you see “Talk to us,” we’ll help confirm access and pricing for your use case.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Do you offer academic or enterprise pricing?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            Yes—academic and enterprise programs are available. Use the “Contact Us” buttons above to reach the right team, or go to <a href="contact.html">Contact</a>.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>
+            Can I cancel anytime?
+            <span class="chev" aria-hidden="true">⌄</span>
+          </summary>
+          <div class="faq-body">
+            Yes. You can change plans as your needs evolve. If you have questions about billing or account changes, reach out via <a href="contact.html">Contact</a>.
+          </div>
+        </details>
+      </div>
+    </section>
 
   </section>
 
@@ -1010,7 +1274,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 qBraid. All rights reserved.</p>
+      <p>&copy; 2026 qBraid. All rights reserved.</p>
       <div class="footer-legal">
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
