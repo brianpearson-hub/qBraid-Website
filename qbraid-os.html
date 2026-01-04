@@ -1205,14 +1205,14 @@
       <div class="benefit-rows">
         <div class="benefit-card">
           <div class="benefit-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48">
-              <!-- Globe (smoother, closer to reference) -->
+            <svg viewBox="0 0 48 48" style="stroke-width: 3;">
+              <!-- Globe (match reference: bold ring + bold grid) -->
               <circle cx="24" cy="24" r="16"></circle>
-              <!-- verticals -->
+              <!-- meridians (center + left/right bowed) -->
               <path d="M24 8v32"></path>
-              <path d="M16 8C12 12 12 36 16 40"></path>
-              <path d="M32 8C36 12 36 36 32 40"></path>
-              <!-- horizontals -->
+              <path d="M16 10C11 16 11 32 16 38"></path>
+              <path d="M32 10C37 16 37 32 32 38"></path>
+              <!-- latitudes (top/bottom curved + equator) -->
               <path d="M8 24h32"></path>
               <path d="M12 18C18 22 30 22 36 18"></path>
               <path d="M12 30C18 26 30 26 36 30"></path>
@@ -1223,15 +1223,15 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48">
-              <!-- Key (cleaner + roomier) -->
-              <circle cx="14.5" cy="24" r="7.5"></circle>
-              <circle cx="14.5" cy="24" r="2.2"></circle>
-              <!-- Shaft -->
-              <path d="M22 24H39"></path>
-              <!-- Teeth (spaced) -->
-              <path d="M30 24v5"></path>
-              <path d="M35 24v4"></path>
+            <svg viewBox="0 0 48 48" style="stroke-width: 2.25;">
+              <!-- Key outline (match reference) -->
+              <g transform="rotate(-35 24 24)">
+                <!-- head -->
+                <circle cx="30" cy="18" r="8"></circle>
+                <circle cx="30" cy="18" r="2.6"></circle>
+                <!-- shaft + minimal bitting (less cluttered) -->
+                <path d="M22 18H12v6h7v4h4v-4"></path>
+              </g>
             </svg>
           </div>
           <h3>Turnkey Integration</h3>

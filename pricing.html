@@ -399,6 +399,8 @@
       grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
       gap: 2.5rem;
       margin-bottom: 6rem;
+      margin-top: 1.25rem; /* bring cards down slightly */
+      align-items: stretch; /* ensure equal-height cards */
     }
 
     .price-card {
@@ -408,6 +410,8 @@
       padding: 3rem 2.5rem;
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
     }
     .price-card::before {
@@ -436,7 +440,10 @@
       border-color: var(--dark-border);
       box-shadow: none;
       background: var(--dark-card);
-      overflow: visible;
+      /* Keep same clipping/hover behavior as other cards */
+      overflow: hidden;
+      /* Make room for the badge inside the card */
+      padding-top: 3.75rem;
     }
 
     /* Standard plan should use the exact same hover top-bar geometry as other cards */
@@ -450,7 +457,7 @@
 
     .popular-badge {
       position: absolute;
-      top: -14px;
+      top: 16px;
       left: 50%;
       transform: translateX(-50%);
       background: var(--gradient);
@@ -518,6 +525,7 @@
 
     .features {
       list-style: none;
+      flex: 1;
     }
 
     .features li {
@@ -929,7 +937,7 @@
       <!-- Free Plan -->
       <div class="price-card">
         <h3>Free Plan</h3>
-        <p class="tagline">for those getting started</p>
+        <p class="tagline">for everybody</p>
         
         <div class="price">
           <span class="currency">$</span>
@@ -977,7 +985,7 @@
       <!-- Pro Plan -->
       <div class="price-card">
         <h3>Pro Plan</h3>
-        <p class="tagline">for quantum innovators</p>
+        <p class="tagline">for power users</p>
         
         <div class="price">
           <span class="currency">$</span>
@@ -1162,7 +1170,7 @@
             <span class="chev" aria-hidden="true">⌄</span>
           </summary>
           <div class="faq-body">
-            Credits are the unit used for pay‑as‑you‑go usage (e.g., QPUs, simulators, and GPU instances). Rates are shown in credits per task/shot/minute depending on the resource. Credits do not expire and are transferable between members of your organization.
+            Credits are the unit used for pay‑as‑you‑go usage (e.g., QPUs, simulators, and GPU instances). Rates are shown in credits per task/shot/minute depending on the resource. Credits do not expire and are transferable between members of your organization. 1 qBraid credit = $0.01 USD.
           </div>
         </details>
 
