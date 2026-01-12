@@ -12,6 +12,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -96,7 +97,35 @@
     .footer-legal a:hover { color: var(--text); }
     .scroll-to-top { display: none; background: var(--gradient); color: white; border: none; border-radius: 50%; width: 48px; height: 48px; font-size: 1.5rem; cursor: pointer; margin: 1.5rem auto 0; box-shadow: 0 4px 12px rgba(70, 9, 111, 0.4); transition: transform 0.2s, box-shadow 0.2s; align-items: center; justify-content: center; }
     @media (max-width: 1024px) { .footer-content { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) {
+    
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+@media (max-width: 768px) {
       .nav-links, .nav-buttons { display: none; }
       .mobile-menu-btn { display: block; margin-left: auto; }
       .nav-container { gap: 0; }

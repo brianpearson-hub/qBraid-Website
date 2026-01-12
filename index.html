@@ -24,7 +24,7 @@
   <meta property="twitter:image" content="https://www.qbraid.com/qBraid Logo.png">
   <meta name="twitter:site" content="@qbraid_official">
   
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1179,7 +1179,35 @@
       }
     }
 
-    @media (max-width: 768px) {
+    
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+@media (max-width: 768px) {
       .nav-links,
       .nav-buttons {
         display: none;
@@ -1363,10 +1391,10 @@
           Products
         </button>
         <div class="mobile-submenu" id="products-submenu">
-          <a href="pilots.html">qBraid Pilots</a>
           <a href="qbraid-lab.html">qBraid Lab</a>
+          <a href="qbraid-os.html">qBraid OS</a>
           <a href="qbook.html">qBook</a>
-          <a href="qbraid-os.html">qBraid-OS</a>
+          <a href="pilots.html">Pilots</a>
         </div>
       </div>
 
@@ -1388,8 +1416,10 @@
           Resources
         </button>
         <div class="mobile-submenu" id="resources-submenu">
-          <a href="https://docs.qbraid.com/">Documentation</a>
-          <a href="https://sdk.qbraid.com/">SDK</a>
+          <a href="https://docs.qbraid.com/home/introduction" target="_blank" rel="noopener">Documentation</a>
+          <a href="tutorials.html">Tutorials</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://discord.com/invite/9jpmpeEV65" target="_blank" rel="noopener">Community</a>
         </div>
       </div>
 
@@ -1659,82 +1689,7 @@
     </div>
   </div>
 
-  <script>
-    (function() {
-      const demoBtn = document.getElementById('watch-demo-btn');
-      const overlay = document.getElementById('demo-overlay');
-      const iframe = document.getElementById('demo-iframe');
-      const closeBtn = document.getElementById('demo-close');
-      const DEMO_URL = 'https://www.youtube.com/embed/c2YvliEA_J4?autoplay=1&playsinline=1&controls=0&rel=0&modestbranding=1&fs=0&iv_load_policy=3';
-
-      function openDemo(event) {
-        event.preventDefault();
-        iframe.src = DEMO_URL;
-        overlay.classList.add('active');
-        demoBtn.setAttribute('aria-expanded', 'true');
-      }
-
-      function closeDemo() {
-        overlay.classList.remove('active');
-        iframe.src = '';
-        demoBtn.setAttribute('aria-expanded', 'false');
-      }
-
-      demoBtn.addEventListener('click', openDemo);
-      closeBtn.addEventListener('click', closeDemo);
-      overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) closeDemo();
-      });
-
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) {
-          closeDemo();
-        }
-      });
-    })();
-
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('active');
-      
-      // Close all submenus when closing main menu
-      if (!mobileMenu.classList.contains('active')) {
-        const submenus = document.querySelectorAll('.mobile-submenu');
-        const toggles = document.querySelectorAll('.mobile-menu-toggle');
-        submenus.forEach(submenu => submenu.classList.remove('active'));
-        toggles.forEach(toggle => toggle.classList.remove('active'));
-      }
-    }
-
-    function toggleSubmenu(submenuId, toggleButton) {
-      const submenu = document.getElementById(submenuId);
-      submenu.classList.toggle('active');
-      toggleButton.classList.toggle('active');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      
-      if (mobileMenu && mobileMenu.classList.contains('active')) {
-        if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-          toggleMobileMenu();
-        }
-      }
-    });
-
-    // Close mobile menu when window is resized to desktop size
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu && mobileMenu.classList.contains('active')) {
-          toggleMobileMenu();
-        }
-      }
-    });
-  </script>
+  <script src="js/site.js" defer></script>
 
   <!-- CTA Section -->
   <section class="section section-cta">

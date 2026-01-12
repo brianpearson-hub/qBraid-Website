@@ -24,7 +24,7 @@
   <meta property="twitter:image" content="https://www.qbraid.com/qBraid Logo.png">
   <meta name="twitter:site" content="@qbraid_official">
   
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -582,7 +582,35 @@
       }
     }
 
-    @media (max-width: 768px) {
+    
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+@media (max-width: 768px) {
       .nav-links,
       .nav-buttons {
         display: none;

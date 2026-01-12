@@ -12,7 +12,31 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Tablet (touch): blog nav */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-container {
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .nav-link {
+        font-size: 1.05rem;
+        padding: 0.5rem 0.25rem;
+      }
+      .btn {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav">
@@ -59,4 +83,7 @@
   </article>
 </body>
 </html>
+
+
+
 

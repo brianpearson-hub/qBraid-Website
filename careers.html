@@ -6,9 +6,10 @@
   <title>Careers at qBraid - Join Our Team</title>
   <meta name="description" content="Join qBraid and help build the future of quantum computing. Explore open positions and opportunities.">
   
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root { --primary: #46096F; --secondary: #df0982; --dark: #0f0f0f; --dark-card: #1a1a1a; --dark-border: rgba(255, 255, 255, 0.1); --text: #ffffff; --text-muted: #a1a1aa; --gradient: linear-gradient(135deg, #46096F 0%, #df0982 100%); }
@@ -167,7 +168,36 @@
     .footer-legal a:hover { color: var(--text); }
     h1, .hero h1 { color: #fff; }
   .hero .gradient-text { color: #fff; background: none; -webkit-text-fill-color: #fff; }
-</style>
+
+
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+  </style>
 </head>
 <body>
     <nav class="nav">

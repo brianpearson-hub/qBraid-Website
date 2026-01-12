@@ -6,7 +6,7 @@
   <title>qBraid for Education - Quantum Computing for Students & Educators</title>
   <meta name="description" content="Empower the next generation with qBraid's educational quantum computing platform. Perfect for universities, schools, and online courses.">
   
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -750,7 +750,35 @@
       }
     }
 
-    @media (max-width: 768px) {
+    
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+@media (max-width: 768px) {
       .nav-links,
       .nav-buttons {
         display: none;
@@ -905,10 +933,10 @@
           Products
         </button>
         <div class="mobile-submenu" id="products-submenu">
-          <a href="pilots.html">qBraid Pilots</a>
           <a href="qbraid-lab.html">qBraid Lab</a>
+          <a href="qbraid-os.html">qBraid OS</a>
           <a href="qbook.html">qBook</a>
-          <a href="qbraid-os.html">qBraid-OS</a>
+          <a href="pilots.html">Pilots</a>
         </div>
       </div>
 
@@ -930,8 +958,10 @@
           Resources
         </button>
         <div class="mobile-submenu" id="resources-submenu">
-          <a href="https://docs.qbraid.com/">Documentation</a>
-          <a href="https://sdk.qbraid.com/">SDK</a>
+          <a href="https://docs.qbraid.com/home/introduction" target="_blank" rel="noopener">Documentation</a>
+          <a href="tutorials.html">Tutorials</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://discord.com/invite/9jpmpeEV65" target="_blank" rel="noopener">Community</a>
         </div>
       </div>
 
@@ -1219,49 +1249,7 @@
     <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">↑</button>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('active');
-      
-      // Close all submenus when closing main menu
-      if (!mobileMenu.classList.contains('active')) {
-        const submenus = document.querySelectorAll('.mobile-submenu');
-        const toggles = document.querySelectorAll('.mobile-menu-toggle');
-        submenus.forEach(submenu => submenu.classList.remove('active'));
-        toggles.forEach(toggle => toggle.classList.remove('active'));
-      }
-    }
-
-    function toggleSubmenu(submenuId, toggleButton) {
-      const submenu = document.getElementById(submenuId);
-      submenu.classList.toggle('active');
-      toggleButton.classList.toggle('active');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      
-      if (mobileMenu && mobileMenu.classList.contains('active')) {
-        if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-          toggleMobileMenu();
-        }
-      }
-    });
-
-    // Close mobile menu when window is resized to desktop size
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu && mobileMenu.classList.contains('active')) {
-          toggleMobileMenu();
-        }
-      }
-    });
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
 

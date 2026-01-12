@@ -6,7 +6,7 @@
   <title>qBraid OS - The Quantum Operating System</title>
   <meta name="description" content="qBraid OS provides cloud access to quantum devices through qBraid Runtime, SDK, and Gateway. Built for quantum hardware companies and component manufacturers.">
   
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="logos/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -880,7 +880,35 @@
       }
     }
 
-    @media (max-width: 768px) {
+    
+    /* Tablet (touch) */
+    @media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+
+      /* Slightly larger tap targets than phone */
+      .mobile-menu-item > a,
+      .mobile-menu-toggle {
+        padding: 1.1rem 1.75rem;
+        font-size: 1.05rem;
+      }
+
+      .mobile-submenu a {
+        padding: 0.85rem 1.75rem 0.85rem 3rem;
+        font-size: 0.98rem;
+      }
+    }
+@media (max-width: 768px) {
       .nav-links,
       .nav-buttons {
         display: none;
@@ -1037,10 +1065,10 @@
           Products
         </button>
         <div class="mobile-submenu" id="products-submenu">
-          <a href="pilots.html">qBraid Pilots</a>
           <a href="qbraid-lab.html">qBraid Lab</a>
+          <a href="qbraid-os.html">qBraid OS</a>
           <a href="qbook.html">qBook</a>
-          <a href="qbraid-os.html">qBraid-OS</a>
+          <a href="pilots.html">Pilots</a>
         </div>
       </div>
 
@@ -1062,8 +1090,10 @@
           Resources
         </button>
         <div class="mobile-submenu" id="resources-submenu">
-          <a href="https://docs.qbraid.com/">Documentation</a>
-          <a href="https://sdk.qbraid.com/">SDK</a>
+          <a href="https://docs.qbraid.com/home/introduction" target="_blank" rel="noopener">Documentation</a>
+          <a href="tutorials.html">Tutorials</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://discord.com/invite/9jpmpeEV65" target="_blank" rel="noopener">Community</a>
         </div>
       </div>
 
@@ -1205,17 +1235,16 @@
       <div class="benefit-rows">
         <div class="benefit-card">
           <div class="benefit-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" style="stroke-width: 3;">
-              <!-- Globe (match reference: bold ring + bold grid) -->
+            <svg viewBox="0 0 48 48">
+              <!-- Globe (simple Pan‑Am / basketball style, thin stroke like other icons) -->
               <circle cx="24" cy="24" r="16"></circle>
-              <!-- meridians (center + left/right bowed) -->
-              <path d="M24 8v32"></path>
-              <path d="M16 10C11 16 11 32 16 38"></path>
-              <path d="M32 10C37 16 37 32 32 38"></path>
-              <!-- latitudes (top/bottom curved + equator) -->
+              <!-- latitude stripes -->
+              <path d="M10 18c5 3 23 3 28 0"></path>
               <path d="M8 24h32"></path>
-              <path d="M12 18C18 22 30 22 36 18"></path>
-              <path d="M12 30C18 26 30 26 36 30"></path>
+              <path d="M10 30c5-3 23-3 28 0"></path>
+              <!-- meridian curves -->
+              <path d="M24 8c-4.5 6-4.5 26 0 32"></path>
+              <path d="M30 9c-3.5 6-3.5 24 0 30"></path>
             </svg>
           </div>
           <h3>Instant Market Access</h3>
@@ -1223,14 +1252,15 @@
         </div>
         <div class="benefit-card">
           <div class="benefit-icon" aria-hidden="true">
-            <svg viewBox="0 0 48 48" style="stroke-width: 2.25;">
-              <!-- Key outline (match reference) -->
+            <svg viewBox="0 0 48 48">
+              <!-- Turnkey Integration key (door-key silhouette, thin stroke like other icons) -->
               <g transform="rotate(-35 24 24)">
-                <!-- head -->
-                <circle cx="30" cy="18" r="8"></circle>
-                <circle cx="30" cy="18" r="2.6"></circle>
-                <!-- shaft + minimal bitting (less cluttered) -->
-                <path d="M22 18H12v6h7v4h4v-4"></path>
+                <!-- head + hole -->
+                <circle cx="31" cy="18" r="9"></circle>
+                <circle cx="31" cy="18" r="3.2"></circle>
+                <!-- shaft + teeth (clean, classic door key) -->
+                <path d="M23 18H6"></path>
+                <path d="M6 18H4v8h5v4h10v-4h5v-4h-5v-2"></path>
               </g>
             </svg>
           </div>
@@ -1373,49 +1403,7 @@
     <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll to top">↑</button>
   </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobile-menu');
-      mobileMenu.classList.toggle('active');
-      
-      // Close all submenus when closing main menu
-      if (!mobileMenu.classList.contains('active')) {
-        const submenus = document.querySelectorAll('.mobile-submenu');
-        const toggles = document.querySelectorAll('.mobile-menu-toggle');
-        submenus.forEach(submenu => submenu.classList.remove('active'));
-        toggles.forEach(toggle => toggle.classList.remove('active'));
-      }
-    }
-
-    function toggleSubmenu(submenuId, toggleButton) {
-      const submenu = document.getElementById(submenuId);
-      submenu.classList.toggle('active');
-      toggleButton.classList.toggle('active');
-    }
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-      
-      if (mobileMenu && mobileMenu.classList.contains('active')) {
-        if (!mobileMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
-          toggleMobileMenu();
-        }
-      }
-    });
-
-    // Close mobile menu when window is resized to desktop size
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenu && mobileMenu.classList.contains('active')) {
-          toggleMobileMenu();
-        }
-      }
-    });
-  </script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>
 
