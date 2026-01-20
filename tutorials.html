@@ -101,6 +101,34 @@
       background: rgba(70, 9, 111, 0.2);
       color: var(--text);
     }
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons { display: flex; align-items: center; gap: 1rem; }
     .btn { padding: 0.625rem 1.25rem; border-radius: 0.5rem; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
     .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--dark-border); }
@@ -166,10 +194,10 @@
         <div class="nav-dropdown">
           <a href="#products" class="nav-link has-dropdown">Products</a>
           <div class="dropdown-content">
-            <a href="qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="qbook.html" class="dropdown-item">qBook</a>
-            <a href="pilots.html" class="dropdown-item">Pilots</a>
+            <a href="qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a>
+            <a href="qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a>
+            <a href="qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a>
+            <a href="pilots.html" class="dropdown-item"><span class="dropdown-title">Pilots</span><span class="dropdown-desc">Custom quantum applications</span></a>
           </div>
         </div>
         <div class="nav-dropdown">

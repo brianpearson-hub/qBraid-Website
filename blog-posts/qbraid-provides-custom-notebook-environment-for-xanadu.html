@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>qBraid Provides Custom Notebook Environment for Xanadu | qBraid Blog</title>
-  <meta name="description" content="As part of QHack, qBraid delivers a premier developer notebook environment for challengers, powered by qBraid Lab.">
+  <meta name="description" content="As part of QHack, qBraid is providing the best quantum developer notebook environment experience for challengers.">
   <meta property="og:title" content="qBraid Provides Custom Notebook Environment for Xanadu">
-  <meta property="og:description" content="As part of QHack, qBraid delivers a premier developer notebook environment for challengers, powered by qBraid Lab.">
+  <meta property="og:description" content="As part of QHack, qBraid is providing the best quantum developer notebook environment experience for challengers.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/xanadu-custom-env.png">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f23310aa5b66b4381a_664d423b742d360224465f28_Q24%2520Templates.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,34 @@
     .nav-dropdown:hover .dropdown-content{opacity:1;visibility:visible;transform:translateY(0);}
     .dropdown-item{display:block;padding:0.65rem 1rem;color:var(--text-muted);text-decoration:none;border-radius:0.5rem;transition:all 0.2s;font-size:0.9rem;}
     .dropdown-item:hover{background:rgba(70,9,111,0.1);color:var(--text);}
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons{display:flex;align-items:center;gap:1rem;}
     .btn{padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s;border:none;cursor:pointer;display:inline-block;}
     .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--dark-border);}
@@ -136,7 +164,7 @@
     <div class="nav-container">
       <a href="../index.html" class="nav-logo"><img src="../Media/qBraid Logo.png" alt="qBraid" /></a>
       <div class="nav-links">
-        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a><a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a><a href="../qbook.html" class="dropdown-item">qBook</a></div></div>
+        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a><a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a><a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Solutions</span><div class="dropdown-content"><a href="../enterprise.html" class="dropdown-item">Enterprise</a><a href="../pilots.html" class="dropdown-item">Developers</a><a href="../quantum-companies.html" class="dropdown-item">Quantum Companies</a><a href="../education.html" class="dropdown-item">Educators</a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Resources</span><div class="dropdown-content"><a href="https://docs.qbraid.com" class="dropdown-item">Docs</a><a href="https://sdk.qbraid.com" class="dropdown-item">SDK</a><a href="../blog.html" class="dropdown-item">Blog</a><a href="../about.html" class="dropdown-item">About</a></div></div>
         <a href="../pricing.html" class="nav-link">Pricing</a>
@@ -153,10 +181,10 @@
       <h1 class="article-title">qBraid Provides Custom Notebook Environment for Xanadu</h1>
       <div class="article-meta"><span class="article-meta-item">2025</span><span class="article-meta-item">5 min read</span></div>
     </header>
-    <div class="article-featured-image"><img src="../Media/blog/xanadu-custom-env.png" alt="Custom notebook environment for Xanadu QHack"></div>
+    <div class="article-featured-image"><img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f23310aa5b66b4381a_664d423b742d360224465f28_Q24%2520Templates.png" alt="Custom notebook environment for Xanadu QHack"></div>
     <div class="article-content">
       <h2>Premier developer experience for QHack</h2>
-      <p>qBraid delivered a tailored qBraid Lab environment for QHack, giving challengers fast, reliable access to the tools they need.</p>
+      <p>As part of QHack, qBraid is providing the best quantum developer notebook environment experience for challengers.</p>
       <h3>What was included</h3>
       <ul>
         <li>Preloaded quantum SDKs and ready-to-run notebooks</li>

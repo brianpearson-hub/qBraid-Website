@@ -8,7 +8,7 @@
   <meta property="og:title" content="qBraid Awarded NSF Grant to Advance Open-Source Quantum Software Ecosystem">
   <meta property="og:description" content="qBraid wins NSF POSE grant to build open source ecosystem">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/nsf-grant-header.jpg">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/68c23938aae82e139467c301_quantum-computer-processor-computer-technology.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -127,6 +127,34 @@
       background: rgba(70, 9, 111, 0.1);
       color: var(--text);
     }
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons { display: flex; align-items: center; gap: 1rem; }
     .btn {
       padding: 0.6rem 1.25rem;
@@ -675,9 +703,9 @@
         <div class="nav-dropdown">
           <span class="nav-link has-dropdown">Products</span>
           <div class="dropdown-content">
-            <a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="../qbook.html" class="dropdown-item">qBook</a>
+            <a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a>
+            <a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a>
+            <a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -728,7 +756,7 @@
 
     <!-- Featured Image -->
     <div class="article-featured-image">
-      <img src="../Media/blog/nsf-grant-header.jpg" alt="Quantum Computing Processor">
+      <img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/68c23938aae82e139467c301_quantum-computer-processor-computer-technology.jpg" alt="Quantum Computing Processor">
     </div>
 
     <!-- Article Content -->

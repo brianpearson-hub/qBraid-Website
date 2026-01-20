@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>qBraid - The One-Stop Quantum Computing Platform</title>
+  <title>qBraid - The Quantum Cloud</title>
   <meta name="description" content="The one-stop quantum computing platform for developers, researchers, and enterprises. Access 31+ quantum devices, cross-framework tools, and cloud development environments.">
   <meta name="keywords" content="quantum computing, quantum hardware, quantum SDK, qBraid, quantum development, quantum programming, quantum cloud, quantum IDE">
   <meta name="author" content="qBraid">
@@ -12,14 +12,14 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.qbraid.com/">
-  <meta property="og:title" content="qBraid - The One-Stop Quantum Computing Platform">
+  <meta property="og:title" content="qBraid - The Quantum Cloud">
   <meta property="og:description" content="The one-stop quantum computing platform for developers, researchers, and enterprises. Access 31+ quantum devices, cross-framework tools, and cloud development environments.">
   <meta property="og:image" content="https://www.qbraid.com/qBraid Logo.png">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.qbraid.com/">
-  <meta property="twitter:title" content="qBraid - The One-Stop Quantum Computing Platform">
+  <meta property="twitter:title" content="qBraid - The Quantum Cloud">
   <meta property="twitter:description" content="The one-stop quantum computing platform for developers, researchers, and enterprises. Access 31+ quantum devices, cross-framework tools, and cloud development environments.">
   <meta property="twitter:image" content="https://www.qbraid.com/qBraid Logo.png">
   <meta name="twitter:site" content="@qbraid_official">
@@ -168,7 +168,9 @@
     }
 
     .dropdown-item {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
       padding: 0.75rem 1rem;
       color: var(--text-muted);
       text-decoration: none;
@@ -176,11 +178,33 @@
       transition: all 0.2s;
       font-size: 0.95rem;
       font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
     }
 
     .dropdown-item:hover {
       background: rgba(70, 9, 111, 0.2);
       color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
     }
 
     .nav-buttons {
@@ -232,7 +256,7 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      padding-top: 80px;
+      padding-top: 60px;
     }
 
     .hero-bg {
@@ -322,6 +346,7 @@
       padding: 1.5rem;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
       overflow: hidden;
+      margin-top: 48px;
       animation: float 6s ease-in-out infinite;
     }
 
@@ -1346,10 +1371,22 @@
         <div class="nav-dropdown">
           <a href="#products" class="nav-link has-dropdown">Products</a>
           <div class="dropdown-content">
-            <a href="qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="qbook.html" class="dropdown-item">qBook</a>
-            <a href="pilots.html" class="dropdown-item">Pilots</a>
+            <a href="qbraid-lab.html" class="dropdown-item">
+              <span class="dropdown-title">qBraid Lab</span>
+              <span class="dropdown-desc">The quantum IDE</span>
+            </a>
+            <a href="qbraid-os.html" class="dropdown-item">
+              <span class="dropdown-title">qBraid OS</span>
+              <span class="dropdown-desc">Cloud infrastructure for quantum devices</span>
+            </a>
+            <a href="qbook.html" class="dropdown-item">
+              <span class="dropdown-title">qBook</span>
+              <span class="dropdown-desc">Education platform</span>
+            </a>
+            <a href="pilots.html" class="dropdown-item">
+              <span class="dropdown-title">Pilots</span>
+              <span class="dropdown-desc">Custom quantum applications</span>
+            </a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -1440,9 +1477,9 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>
-          The One-Stop<br/>
-          <span class="gradient-text">Quantum Computing</span><br/>
-          Platform
+          The<br/>
+          Quantum<br/>
+          Cloud
         </h1>
         <p>
           Access quantum hardware, SDKs, and tools from leading providers all in one unified environment.

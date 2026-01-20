@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unleashing the Power of NVIDIA CUDA Quantum with qBraid | qBraid Blog</title>
-  <meta name="description" content="Access NVIDIA CUDA Quantum through qBraid’s platform, pairing GH200-powered compute with multi-backend quantum workflows.">
+  <meta name="description" content="As an early adopter of the NVIDIA GH200 Grace Hopper Superchip systems, qBraid provides unparalleled access to today’s most advanced computing technologies.">
   <meta property="og:title" content="Unleashing the Power of NVIDIA CUDA Quantum with qBraid">
-  <meta property="og:description" content="Access NVIDIA CUDA Quantum through qBraid’s platform, pairing GH200-powered compute with multi-backend quantum workflows.">
+  <meta property="og:description" content="As an early adopter of the NVIDIA GH200 Grace Hopper Superchip systems, qBraid provides unparalleled access to today’s most advanced computing technologies.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/cuda-quantum.png">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ef663934af44a940f7_6620941d25e18d8c55e96741_65f71a730d92f87b6329559b_abstract-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,34 @@
     .nav-dropdown:hover .dropdown-content{opacity:1;visibility:visible;transform:translateY(0);}
     .dropdown-item{display:block;padding:0.65rem 1rem;color:var(--text-muted);text-decoration:none;border-radius:0.5rem;transition:all 0.2s;font-size:0.9rem;}
     .dropdown-item:hover{background:rgba(70,9,111,0.1);color:var(--text);}
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons{display:flex;align-items:center;gap:1rem;}
     .btn{padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s;border:none;cursor:pointer;display:inline-block;}
     .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--dark-border);}
@@ -136,7 +164,7 @@
     <div class="nav-container">
       <a href="../index.html" class="nav-logo"><img src="../Media/qBraid Logo.png" alt="qBraid" /></a>
       <div class="nav-links">
-        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a><a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a><a href="../qbook.html" class="dropdown-item">qBook</a></div></div>
+        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a><a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a><a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Solutions</span><div class="dropdown-content"><a href="../enterprise.html" class="dropdown-item">Enterprise</a><a href="../pilots.html" class="dropdown-item">Developers</a><a href="../quantum-companies.html" class="dropdown-item">Quantum Companies</a><a href="../education.html" class="dropdown-item">Educators</a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Resources</span><div class="dropdown-content"><a href="https://docs.qbraid.com" class="dropdown-item">Docs</a><a href="https://sdk.qbraid.com" class="dropdown-item">SDK</a><a href="../blog.html" class="dropdown-item">Blog</a><a href="../about.html" class="dropdown-item">About</a></div></div>
         <a href="../pricing.html" class="nav-link">Pricing</a>
@@ -151,12 +179,12 @@
     <header class="article-header">
       <span class="article-category">Product</span>
       <h1 class="article-title">Unleashing the Power of NVIDIA CUDA Quantum with qBraid</h1>
-      <div class="article-meta"><span class="article-meta-item">2025</span><span class="article-meta-item">6 min read</span></div>
+      <div class="article-meta"><span class="article-meta-item">2025</span><span class="article-meta-item">5 min read</span></div>
     </header>
-    <div class="article-featured-image"><img src="../Media/blog/cuda-quantum.png" alt="CUDA Quantum with qBraid"></div>
+    <div class="article-featured-image"><img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ef663934af44a940f7_6620941d25e18d8c55e96741_65f71a730d92f87b6329559b_abstract-image.png" alt="CUDA Quantum with qBraid"></div>
     <div class="article-content">
       <h2>GPU-accelerated quantum workflows</h2>
-      <p>As an early adopter of NVIDIA GH200 Grace Hopper Superchip systems, qBraid pairs CUDA Quantum with multi-backend access to accelerate quantum-classical research.</p>
+      <p>As an early adopter of the NVIDIA GH200 Grace Hopper Superchip systems, qBraid provides unparalleled access to today’s most advanced computing technologies.</p>
       <h3>What you get</h3>
       <ul>
         <li>CUDA Quantum on GH200 for hybrid simulations and workloads</li>

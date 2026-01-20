@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>qBraid leads component project in The Bloch Quantum Tech Hub | qBraid Blog</title>
-  <meta name="description" content="The Bloch develops quantum technology solutions for society’s most pressing problems, accelerating industry adoption and research commercialization.">
+  <meta name="description" content="The Bloch develops quantum technology solutions for society’s most pressing problems by accelerating industry adoption to drive research commercialization, catapulting US leadership in quantum information science and technology.">
   <meta property="og:title" content="qBraid leads component project in The Bloch Quantum Tech Hub">
-  <meta property="og:description" content="The Bloch develops quantum technology solutions for society’s most pressing problems, accelerating industry adoption and research commercialization.">
+  <meta property="og:description" content="The Bloch develops quantum technology solutions for society’s most pressing problems by accelerating industry adoption to drive research commercialization, catapulting US leadership in quantum information science and technology.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/bloch-tech-hub-header.jpeg">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f24286672060868ced_6620941ab1131ad019442503_6617033bab291b84b0632a10_chicago_skyline_smaller.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +42,34 @@
     .nav-dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
     .dropdown-item { display: block; padding: 0.65rem 1rem; color: var(--text-muted); text-decoration: none; border-radius: 0.5rem; transition: all 0.2s; font-size: 0.9rem; }
     .dropdown-item:hover { background: rgba(70, 9, 111, 0.1); color: var(--text); }
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons { display: flex; align-items: center; gap: 1rem; }
     .btn { padding: 0.6rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; display: inline-block; }
     .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--dark-border); }
@@ -154,9 +182,9 @@
         <div class="nav-dropdown">
           <span class="nav-link has-dropdown">Products</span>
           <div class="dropdown-content">
-            <a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="../qbook.html" class="dropdown-item">qBook</a>
+            <a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a>
+            <a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a>
+            <a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -196,15 +224,15 @@
       <h1 class="article-title">qBraid leads component project in The Bloch Quantum Tech Hub</h1>
       <div class="article-meta">
         <span class="article-meta-item">September 2025</span>
-        <span class="article-meta-item">8 min read</span>
+        <span class="article-meta-item">10 min read</span>
       </div>
     </header>
     <div class="article-featured-image">
-      <img src="../Media/blog/bloch-tech-hub-header.jpeg" alt="Chicago skyline Bloch Quantum Tech Hub">
+      <img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f24286672060868ced_6620941ab1131ad019442503_6617033bab291b84b0632a10_chicago_skyline_smaller.jpeg" alt="Chicago skyline Bloch Quantum Tech Hub">
     </div>
     <div class="article-content">
       <h2>Accelerating quantum technology with The Bloch</h2>
-      <p>The Bloch Quantum Tech Hub is advancing quantum solutions to address critical societal challenges. As a component project lead, qBraid is helping accelerate industry adoption, research commercialization, and U.S. leadership in quantum information science and technology.</p>
+      <p>The Bloch develops quantum technology solutions for society’s most pressing problems by accelerating industry adoption to drive research commercialization, catapulting US leadership in quantum information science and technology.</p>
       <h3>What qBraid delivers</h3>
       <ul>
         <li>Cloud operating stack for neutral-atom, superconducting, and other devices</li>

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QCHack highlights and the release of qBraid SDK | qBraid Blog</title>
-  <meta name="description" content="Recapping QCHack: talks, mentorship, and the 24-hour hackathon—plus the release of qBraid SDK.">
+  <meta name="description" content="At this year's QCHack, participants attended a week filled with amazing talks, 1:1 sessions with academic and industry mentors, and a 24 hour hackathon hosted by Stanford, Yale and Berkeley.">
   <meta property="og:title" content="QCHack highlights and the release of qBraid SDK">
-  <meta property="og:description" content="Recapping QCHack: talks, mentorship, and the 24-hour hackathon—plus the release of qBraid SDK.">
+  <meta property="og:description" content="At this year's QCHack, participants attended a week filled with amazing talks, 1:1 sessions with academic and industry mentors, and a 24 hour hackathon hosted by Stanford, Yale and Berkeley.">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/qchack-highlights.png">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ecefaa9a37df0b8616_664d466f71e36127d05512d1_facebook_cover.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,34 @@
     .nav-dropdown:hover .dropdown-content{opacity:1;visibility:visible;transform:translateY(0);}
     .dropdown-item{display:block;padding:0.65rem 1rem;color:var(--text-muted);text-decoration:none;border-radius:0.5rem;transition:all 0.2s;font-size:0.9rem;}
     .dropdown-item:hover{background:rgba(70,9,111,0.1);color:var(--text);}
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons{display:flex;align-items:center;gap:1rem;}
     .btn{padding:0.6rem 1.25rem;border-radius:0.5rem;text-decoration:none;font-weight:600;font-size:0.9rem;transition:all 0.2s;border:none;cursor:pointer;display:inline-block;}
     .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--dark-border);}
@@ -136,7 +164,7 @@
     <div class="nav-container">
       <a href="../index.html" class="nav-logo"><img src="../Media/qBraid Logo.png" alt="qBraid" /></a>
       <div class="nav-links">
-        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a><a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a><a href="../qbook.html" class="dropdown-item">qBook</a></div></div>
+        <div class="nav-dropdown"><span class="nav-link has-dropdown">Products</span><div class="dropdown-content"><a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a><a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a><a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Solutions</span><div class="dropdown-content"><a href="../enterprise.html" class="dropdown-item">Enterprise</a><a href="../pilots.html" class="dropdown-item">Developers</a><a href="../quantum-companies.html" class="dropdown-item">Quantum Companies</a><a href="../education.html" class="dropdown-item">Educators</a></div></div>
         <div class="nav-dropdown"><span class="nav-link has-dropdown">Resources</span><div class="dropdown-content"><a href="https://docs.qbraid.com" class="dropdown-item">Docs</a><a href="https://sdk.qbraid.com" class="dropdown-item">SDK</a><a href="../blog.html" class="dropdown-item">Blog</a><a href="../about.html" class="dropdown-item">About</a></div></div>
         <a href="../pricing.html" class="nav-link">Pricing</a>
@@ -153,10 +181,10 @@
       <h1 class="article-title">QCHack highlights and the release of qBraid SDK</h1>
       <div class="article-meta"><span class="article-meta-item">2025</span><span class="article-meta-item">5 min read</span></div>
     </header>
-    <div class="article-featured-image"><img src="../Media/blog/qchack-highlights.png" alt="QCHack highlights"></div>
+    <div class="article-featured-image"><img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ecefaa9a37df0b8616_664d466f71e36127d05512d1_facebook_cover.png" alt="QCHack highlights"></div>
     <div class="article-content">
       <h2>A packed week of quantum building</h2>
-      <p>QCHack brought together talks, mentorship, and a 24-hour hackathon hosted by Stanford, Yale, and Berkeley—plus the release of qBraid SDK.</p>
+      <p>At this year's QCHack, participants attended a week filled with amazing talks, 1:1 sessions with academic and industry mentors, and a 24 hour hackathon hosted by Stanford, Yale and Berkeley.</p>
       <h3>Highlights</h3>
       <ul>
         <li>Deep-dive sessions with academic and industry mentors</li>

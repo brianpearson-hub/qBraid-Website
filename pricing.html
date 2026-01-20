@@ -172,6 +172,34 @@
       background: rgba(70, 9, 111, 0.2);
       color: var(--text);
     }
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
 
     .nav-buttons {
       display: flex;
@@ -443,8 +471,7 @@
       background: var(--dark-card);
       /* Keep same clipping/hover behavior as other cards */
       overflow: hidden;
-      /* Make room for the badge inside the card */
-      padding-top: 3.75rem;
+      /* Keep identical padding to other cards so headings/buttons align */
     }
 
     /* Standard plan should use the exact same hover top-bar geometry as other cards */
@@ -470,6 +497,12 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
     }
 
     .price-card h3 {
@@ -510,9 +543,13 @@
 
     .price-card .btn {
       width: 100%;
-      padding: 1rem;
+      height: 56px;
+      padding: 0 1rem;
       font-size: 1rem;
       margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .features-title {
@@ -919,10 +956,10 @@
         <div class="nav-dropdown">
           <a href="#products" class="nav-link has-dropdown">Products</a>
           <div class="dropdown-content">
-            <a href="qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="qbook.html" class="dropdown-item">qBook</a>
-            <a href="pilots.html" class="dropdown-item">Pilots</a>
+            <a href="qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a>
+            <a href="qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a>
+            <a href="qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a>
+            <a href="pilots.html" class="dropdown-item"><span class="dropdown-title">Pilots</span><span class="dropdown-desc">Custom quantum applications</span></a>
           </div>
         </div>
         <div class="nav-dropdown">

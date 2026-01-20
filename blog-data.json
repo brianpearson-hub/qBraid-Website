@@ -14,10 +14,9 @@
       "category": "Press Releases",
       "readTime": "2",
       "excerpt": "qBraid wins NSF POSE grant to build open source ecosystem",
-      "featuredImage": "Media/blog/nsf-grant-header.jpg",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/68c23938aae82e139467c301_quantum-computer-processor-computer-technology.jpg",
       "content": "blog-posts/nsf-grant-2025.html"
-    }
-    ,
+    },
     {
       "id": "nvidia-ai4quantum-2025",
       "title": "Nvidia and qBraid democratize AI4Quantum",
@@ -32,10 +31,9 @@
       "category": "Press Releases",
       "readTime": "10",
       "excerpt": "qBraid and NVIDIA CUDA-Q are removing the two biggest blockers to AI4Quantum research.",
-      "featuredImage": "Media/blog/nvidia-ai4quantum-header.jpg",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6848aa18a3e7ae5139e5c499_th-96932186.jpg",
       "content": "blog-posts/nvidia-and-qbraid-democratize-ai4quantum.html"
-    }
-    ,
+    },
     {
       "id": "qbraid-alliance-2025",
       "title": "qBraid Alliance unites quantum computing across universities",
@@ -50,10 +48,9 @@
       "category": "Press Releases",
       "readTime": "8",
       "excerpt": "Our first cohort of the qBraid Alliance, partnering with student organizations across leading universities.",
-      "featuredImage": "Media/blog/qbraid-alliance-header.png",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67af9c372815d5d71f511a15_connections-post.png",
       "content": "blog-posts/qbraid-alliance-unites-quantum-computing-across-universities.html"
-    }
-    ,
+    },
     {
       "id": "ibm-quantum-lab-users-2025",
       "title": "qBraid: The Premier Destination for IBM Quantum Lab users",
@@ -68,10 +65,9 @@
       "category": "Press Releases",
       "readTime": "5",
       "excerpt": "Coming from IBM Quantum Lab? Learn how to start using qBraid Lab.",
-      "featuredImage": "Media/blog/ibm-quantum-lab-header.jpg",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67afaaf0cc056d21a6a4e4b5_6658a60081819e6fbdb61016_4353853.jpg",
       "content": "blog-posts/qbraid-the-premier-destination-for-ibm-quantum-lab-users.html"
-    }
-    ,
+    },
     {
       "id": "gpu4quantum-2025",
       "title": "GPUs on qBraid: Early Access and the GPU4Quantum Challenge",
@@ -86,10 +82,9 @@
       "category": "Product",
       "readTime": "3",
       "excerpt": "Supercharge your quantum workflows with GPUs on qBraid.",
-      "featuredImage": "Media/blog/gpu4quantum-header.png",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/68af6a2a22e1b0f408d608fe_Screenshot%202025-08-27%20at%2012.00.39%E2%80%AFPM.png",
       "content": "blog-posts/gpu4quantum.html"
-    }
-    ,
+    },
     {
       "id": "bloch-quantum-tech-hub-2025",
       "title": "qBraid leads component project in The Bloch Quantum Tech Hub",
@@ -102,12 +97,11 @@
         "bio": "Press and partnerships announcements from the qBraid team."
       },
       "category": "Press Releases",
-      "readTime": "8",
-      "excerpt": "qBraid joins The Bloch to accelerate quantum tech adoption and commercialization.",
-      "featuredImage": "Media/blog/bloch-tech-hub-header.jpeg",
+      "readTime": "10",
+      "excerpt": "The Bloch develops quantum technology solutions for society’s most pressing problems by accelerating industry adoption to drive research commercialization, catapulting US leadership in quantum information science and technology.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f24286672060868ced_6620941ab1131ad019442503_6617033bab291b84b0632a10_chicago_skyline_smaller.jpeg",
       "content": "blog-posts/qbraid-leads-component-project-in-the-bloch-quantum-tech-hub.html"
-    }
-    ,
+    },
     {
       "id": "amazon-braket-sdk-2025",
       "title": "qBraid Announces qBraid SDK Integrated with Amazon Braket on qBraid Lab",
@@ -120,12 +114,11 @@
         "bio": "Product updates and releases from the qBraid team."
       },
       "category": "Press Releases",
-      "readTime": "6",
-      "excerpt": "qBraid SDK now offers unified access to quantum hardware through Amazon Braket.",
-      "featuredImage": "Media/blog/amazon-braket-sdk-header.png",
+      "readTime": "5",
+      "excerpt": "qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6797355cf89c9f377b364cbe_jobs_tag.png",
       "content": "blog-posts/qbraid-announces-qbraid-sdk-integrated-with-amazon-braket.html"
-    }
-    ,
+    },
     {
       "id": "q4bio-wellcome-leap-2025",
       "title": "qBraid Awarded Q4Bio Contract by Wellcome Leap",
@@ -138,12 +131,11 @@
         "bio": "Research partnerships and collaborations led by the qBraid team."
       },
       "category": "Press Releases",
-      "readTime": "7",
-      "excerpt": "qBraid leads a multi-institution team under Wellcome Leap's Q4Bio program.",
-      "featuredImage": "Media/blog/q4bio-header.jpeg",
+      "readTime": "5",
+      "excerpt": "qBraid will lead a team of researchers from MIT, UChicago, Argonne National Laboratory, and QuEra to develop quantum computing solutions for studying the interaction of metals and intrinsically disordered proteins.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6792cfead640ee4fc94f5bc0_physics.jpeg",
       "content": "blog-posts/qbraid-awarded-q4bio-contract-by-wellcome-leap.html"
-    }
-    ,
+    },
     {
       "id": "connections-podcast-2025",
       "title": "Announcing the Launch of the qBraid Connections Podcast",
@@ -155,13 +147,12 @@
         "image": "Media/qBraid Logo.png",
         "bio": "Sharing voices from across the quantum ecosystem—builders, researchers, educators, and partners."
       },
-      "category": "Collaborations",
+      "category": "Press Releases",
       "readTime": "5",
       "excerpt": "A new podcast series highlighting quantum builders and partners shaping the ecosystem.",
-      "featuredImage": "Media/blog/connections-podcast.png",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67afa3d69ae9823e6c606214_66a25430f7df15a00613c5d7_qBraid%20Connections%20Main%20Post.png",
       "content": "blog-posts/announcing-the-launch-of-the-qbraid-connections-podcast.html"
-    }
-    ,
+    },
     {
       "id": "duality-cohort-2025",
       "title": "Duality Quantum Accelerator Accepts Six Startups into Inaugural Cohort",
@@ -174,12 +165,11 @@
         "bio": "Advancing quantum startups with cloud infrastructure, multi-device access, and a thriving developer community."
       },
       "category": "Press Releases",
-      "readTime": "6",
-      "excerpt": "qBraid joins the first Duality cohort to accelerate quantum startups with top labs and industry partners.",
-      "featuredImage": "Media/blog/duality-cohort.webp",
+      "readTime": "10",
+      "excerpt": "Duality Quantum Accelerator Accepts Six Startups into Inaugural Cohort",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77e732719544e4edb7d7_6620941575f767e21d96389d_645ea5d43bdf666a77f0017a_Duality_Cohort-1_LinkedIn_v2-2048x1070.webp",
       "content": "blog-posts/duality-quantum-accelerator-accepts-six-startups-into-inaugural-cohort.html"
-    }
-    ,
+    },
     {
       "id": "cuda-quantum-2025",
       "title": "Unleashing the Power of NVIDIA CUDA Quantum with qBraid",
@@ -191,13 +181,12 @@
         "image": "Media/qBraid Logo.png",
         "bio": "Delivering unified developer tooling, runtime, and cloud connectivity across quantum and GPU platforms."
       },
-      "category": "Product",
-      "readTime": "6",
-      "excerpt": "Pair CUDA Quantum on GH200 with qBraid’s multi-backend platform for hybrid research.",
-      "featuredImage": "Media/blog/cuda-quantum.png",
+      "category": "Collaborations",
+      "readTime": "5",
+      "excerpt": "As an early adopter of the NVIDIA GH200 Grace Hopper Superchip systems, qBraid provides unparalleled access to today’s most advanced computing technologies.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ef663934af44a940f7_6620941d25e18d8c55e96741_65f71a730d92f87b6329559b_abstract-image.png",
       "content": "blog-posts/unleashing-the-power-of-nvidia-cuda-quantum-with-qbraid.html"
-    }
-    ,
+    },
     {
       "id": "xanadu-custom-env-2025",
       "title": "qBraid Provides Custom Notebook Environment for Xanadu",
@@ -211,11 +200,27 @@
       },
       "category": "Hackathons",
       "readTime": "5",
-      "excerpt": "Delivering a premier QHack experience with preloaded SDKs and scalable notebooks on qBraid Lab.",
-      "featuredImage": "Media/blog/xanadu-custom-env.png",
+      "excerpt": "As part of QHack, qBraid is providing the best quantum developer notebook environment experience for challengers.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f23310aa5b66b4381a_664d423b742d360224465f28_Q24%2520Templates.png",
       "content": "blog-posts/qbraid-provides-custom-notebook-environment-for-xanadu.html"
-    }
-    ,
+    },
+    {
+      "id": "haqs-review-2025",
+      "title": "HAQS Review by CQTech",
+      "slug": "haas-2022-review",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Hackathons & Community",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Supporting quantum hackathons with curated environments, mentors, and community programs."
+      },
+      "category": "Hackathons",
+      "readTime": "10",
+      "excerpt": "From October 21st to November 5th of 2022, qBraid hosted HAQS, bringing global teams together to tackle quantum challenges.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67afa1c313bc5abfb33fff82_qbraid_on_laptop.png",
+      "content": "blog-posts/haas-2022-review.html"
+    },
     {
       "id": "qchack-highlights-2025",
       "title": "QCHack highlights and the release of qBraid SDK",
@@ -229,11 +234,10 @@
       },
       "category": "Hackathons",
       "readTime": "5",
-      "excerpt": "Recapping QCHack’s talks, mentorship, hackathon, and the launch of qBraid SDK.",
-      "featuredImage": "Media/blog/qchack-highlights.png",
+      "excerpt": "At this year's QCHack, participants attended a week filled with amazing talks, 1:1 sessions with academic and industry mentors, and a 24 hour hackathon hosted by Stanford, Yale and Berkeley.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ecefaa9a37df0b8616_664d466f71e36127d05512d1_facebook_cover.png",
       "content": "blog-posts/qchack-highlights-and-the-release-of-qbraid-sdk.html"
-    }
-    ,
+    },
     {
       "id": "nyuad-hackathon-2025",
       "title": "NYUAD Hackathon for Social Good highlights",
@@ -246,77 +250,96 @@
         "bio": "Empowering hackathon teams with turnkey cloud environments and multi-device quantum access."
       },
       "category": "Hackathons",
-      "readTime": "6",
-      "excerpt": "How qBraid powered the NYUAD Hackathon for Social Good with quantum tools and support.",
-      "featuredImage": "Media/blog/nyuad-hackathon.jpeg",
+      "readTime": "4",
+      "excerpt": "The potential of the field of quantum computing is so huge that everyone in the field cannot wait for all the promises that the field holds to become a reality.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77eb9963dceb9d697ffa_662094187aa75f6a7de5b181_645ea49d2a5ed9ddec5e2b6d_SHI_5854(1)-min.jpeg",
       "content": "blog-posts/nyuad-hackathon-for-social-good-highlights.html"
-    }
-    ,
+    },
     {
       "id": "qiskit-summer-school-2025",
-      "title": "qBraid to Host IBM’s Qiskit Global Summer School 2025",
+      "title": "qBraid to Host IBM’s Qiskit Global Summer School 2025 as Preferred Jupyter Lab Platform for Quantum Hardware Access",
       "slug": "qiskit-global-summer-school-2025",
       "date": "2025-12-01",
-      "author": { "name": "qBraid Team", "title": "Education", "image": "Media/qBraid Logo.png", "bio": "Providing turnkey quantum education environments and curriculum support." },
+      "author": {
+        "name": "qBraid Team",
+        "title": "Education",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Providing turnkey quantum education environments and curriculum support."
+      },
       "category": "Collaborations",
-      "readTime": "4",
-      "excerpt": "qBraid is the preferred JupyterLab platform for Qiskit Global Summer School 2025 with ready-to-run environments.",
-      "featuredImage": "Media/blog/qbraid-alliance-header.png",
+      "readTime": "3",
+      "excerpt": "qBraid has been selected by IBM to host their annual Qiskit Global Summer School for the second year in a row.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/686bc490347a16d5672eef8d_pexels-luis-gomes-166706-546819.jpg",
       "content": "blog-posts/qiskit-global-summer-school-2025.html"
-    }
-    ,
+    },
     {
       "id": "quera-advantages-cloud-2025",
-      "title": "[Partner Post] QuEra: Advantages of Cloud-Based Quantum Computing",
+      "title": "[Partner Post] QuEra : Exploring the Advantages of Cloud-Based Quantum Computing",
       "slug": "quera-advantages-of-cloud-based-quantum-computing",
       "date": "2025-12-01",
-      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "author": {
+        "name": "qBraid Team",
+        "title": "Collaborations",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Partner stories and ecosystem highlights from the qBraid team."
+      },
       "category": "Collaborations",
-      "readTime": "5",
-      "excerpt": "Cloud-based access to QuEra neutral-atom devices through qBraid accelerates research and enterprise adoption.",
-      "featuredImage": "Media/blog/qchack-highlights.png",
+      "readTime": "1",
+      "excerpt": "Explore the advantages of cloud-based quantum computing and how it is revolutionizing research and development across various industries",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/679742aea025910b0299b58f_quera_bg.jpg",
       "content": "blog-posts/quera-advantages-of-cloud-based-quantum-computing.html"
-    }
-    ,
+    },
     {
       "id": "quera-top-apps-2025",
-      "title": "[Partner Post] QuEra: Top Applications of Quantum Computing for Enterprises",
+      "title": "[Partner Post] QuEra : Top Applications Of Quantum Computing for Enterprises",
       "slug": "quera-top-applications-for-enterprises",
       "date": "2025-12-01",
-      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "author": {
+        "name": "qBraid Team",
+        "title": "Collaborations",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Partner stories and ecosystem highlights from the qBraid team."
+      },
       "category": "Collaborations",
-      "readTime": "5",
-      "excerpt": "Enterprise use cases for neutral-atom quantum computing delivered through qBraid.",
-      "featuredImage": "Media/blog/amazon-braket-sdk-header.png",
+      "readTime": "1",
+      "excerpt": "Discover how quantum computing is revolutionizing enterprises, from enhancing cybersecurity with quantum encryption to optimizing complex logistics and supply chain operations.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6797387b327e01750b0ef1ad_BH_galactic_purple.jpg",
       "content": "blog-posts/quera-top-applications-for-enterprises.html"
-    }
-    ,
+    },
     {
       "id": "quera-aquila-braket-2025",
-      "title": "qBraid & QuEra: Access to Aquila on Amazon Braket",
+      "title": "qBraid & QuEra are proud to announce access to Aquila on Amazon Braket via the qBraid platform",
       "slug": "qbraid-and-quera-aquila-on-amazon-braket",
       "date": "2025-12-01",
-      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "author": {
+        "name": "qBraid Team",
+        "title": "Collaborations",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Partner stories and ecosystem highlights from the qBraid team."
+      },
       "category": "Collaborations",
       "readTime": "5",
-      "excerpt": "Run on QuEra’s 256-qubit Aquila via Amazon Braket with qBraid’s unified tooling and analytics.",
-      "featuredImage": "Media/blog/q4bio-header.jpeg",
+      "excerpt": "qBraid’s quantum computing platform adds access to 256 qubit neutral atom quantum computer, Aquila by QuEra.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f0238ac2aab556a8e3_6620941af4199d4061931de3_647d3eb2c08c36dc4fc50ecd_QuEra_Neutral-Atom-Platform-675x380-2373419990.jpeg",
       "content": "blog-posts/qbraid-and-quera-aquila-on-amazon-braket.html"
-    }
-    ,
+    },
     {
       "id": "pasqal-pulser-2025",
-      "title": "Pulser, Pasqal’s quantum SDK, is available on qBraid Lab",
+      "title": "Pulser, Pasqal’s quantum SDK for programming on neutral atom QC is available on qBraid Lab",
       "slug": "pasqal-pulser-available-on-qbraid-lab",
       "date": "2025-12-01",
-      "author": { "name": "qBraid Team", "title": "Collaborations", "image": "Media/qBraid Logo.png", "bio": "Partner stories and ecosystem highlights from the qBraid team." },
+      "author": {
+        "name": "qBraid Team",
+        "title": "Collaborations",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Partner stories and ecosystem highlights from the qBraid team."
+      },
       "category": "Collaborations",
       "readTime": "4",
-      "excerpt": "Spin up Pulser in minutes on qBraid Lab to program neutral atom quantum computers.",
-      "featuredImage": "Media/blog/pasqal-placeholder.png",
+      "excerpt": "The qBraid platform will allow users to play with Pulser in a matter of a few minutes.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77edccb56cc3270012c2_662094185e3acea23776c1e2_647d3fdae300d0bb67f6bc90_001420111_896x598_c-1441590865.jpeg",
       "content": "blog-posts/pasqal-pulser-available-on-qbraid-lab.html"
-    }
-    ,
+    },
     {
       "id": "qai-institute-2025",
       "title": "qBraid partners with Quantum Algorithms Institute",
@@ -329,12 +352,11 @@
         "bio": "Driving partnerships and community programs across education and research."
       },
       "category": "Collaborations",
-      "readTime": "4",
-      "excerpt": "Strengthening the Pacific Northwest ecosystem with joint labs, training, and research pilots.",
-      "featuredImage": "Media/blog/qai-partner.jpeg",
+      "readTime": "5",
+      "excerpt": "qBraid and Quantum Algorithms Institute partner to accelerate the pace of quantum computing in British Columbia and beyond.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f3f7ce83b25ee6e5ba_6620941adf3843723ac8a9d5_647d3f43d3cfe3869a8fb983_1636149524618-710017963.jpeg",
       "content": "blog-posts/qbraid-partners-with-quantum-algorithms-institute.html"
-    }
-    ,
+    },
     {
       "id": "ieee-award-2025",
       "title": "qBraid’s Wins 1st for the Best Quantum Algorithm Paper Award at IEEE",
@@ -351,8 +373,7 @@
       "excerpt": "IEEE honored qBraid’s hybrid quantum-classical algorithm work with a Best Paper Award at QCE 2023.",
       "featuredImage": "Media/blog/ieee-award.jpeg",
       "content": "blog-posts/qbraids-wins-1st-for-the-best-quantum-algorithm-paper-award-at-ieee-qce-2023.html"
-    }
-    ,
+    },
     {
       "id": "flight-optimization-2025",
       "title": "Quantum Computing for Flight Trajectory Optimization",
@@ -365,12 +386,11 @@
         "bio": "Translating hybrid algorithms into actionable workflows for researchers."
       },
       "category": "Research",
-      "readTime": "5",
-      "excerpt": "Hybrid quantum-classical pipelines search for fuel-efficient flight paths on qBraid’s platform.",
+      "readTime": "1",
+      "excerpt": "qBraid's team used hybrid classical-quantum algorithms to determine the best flight path",
       "featuredImage": "Media/blog/flight-cockpit.png",
       "content": "blog-posts/quantum-computing-for-flight-trajectory-optimization.html"
-    }
-    ,
+    },
     {
       "id": "vqc-benchmark-2025",
       "title": "Benchmarking variational quantum circuits with permutation symmetry",
@@ -383,12 +403,11 @@
         "bio": "Analyzing how circuit structure affects execution on diverse hardware."
       },
       "category": "Research",
-      "readTime": "4",
+      "readTime": "5",
       "excerpt": "Permutation-symmetric ansätze reduce parameters while showing different hardware trade-offs on qBraid.",
       "featuredImage": "Media/blog/arxiv-bg.jpeg",
       "content": "blog-posts/benchmarking-variational-quantum-circuits-with-permutation-symmetry.html"
-    }
-    ,
+    },
     {
       "id": "power-flows-2025",
       "title": "Quantum Power Flows: From Theory to Practice",
@@ -401,12 +420,11 @@
         "bio": "Focused on applying quantum models to real-world engineering challenges."
       },
       "category": "Research",
-      "readTime": "5",
+      "readTime": "1",
       "excerpt": "Quantum-assisted simulations model power grid flows to inform stability and resource allocation.",
       "featuredImage": "Media/blog/arxiv-bg.jpeg",
       "content": "blog-posts/quantum-power-flows-from-theory-to-practice.html"
-    }
-    ,
+    },
     {
       "id": "truncation-effects-2025",
       "title": "Estimating truncation effects of quantum bosonic systems using sampling algorithms",
@@ -419,12 +437,11 @@
         "bio": "Experimenting with classical sampling to bound quantum simulation errors."
       },
       "category": "Research",
-      "readTime": "5",
-      "excerpt": "Classical sampling (MCMC) estimates truncation errors in simulated bosonic systems, easing resource planning.",
+      "readTime": "1",
+      "excerpt": "Learn how classical sampling methods, such as Markov Chain Monte Carlo, can estimate truncation errors in simulating bosons on quantum computers, aiding resource assessment and result validation for quantum simulations, including applications in two-dimensional lattice scalar field theory.",
       "featuredImage": "Media/blog/arxiv-bg.jpeg",
       "content": "blog-posts/estimating-truncation-effects-of-quantum-bosonic-systems-using-sampling-algorithms.html"
-    }
-    ,
+    },
     {
       "id": "embedding-learning-2025",
       "title": "Embedding Learning in Hybrid Quantum-Classical Neural Networks",
@@ -437,10 +454,180 @@
         "bio": "Advancing hybrid models with embedded classical quantum layers."
       },
       "category": "Research",
-      "readTime": "5",
+      "readTime": "1",
       "excerpt": "Embedding strategies improve convergence in hybrid quantum-classical neural networks run on qBraid.",
       "featuredImage": "Media/blog/arxiv-bg.jpeg",
       "content": "blog-posts/embedding-learning-in-hybrid-quantum-classical-neural-networks.html"
+    },
+    {
+      "id": "osu-intel-sdk-2025",
+      "title": "OSU uses Intel Quantum SDK with qBraid",
+      "slug": "osu-uses-intel-quantum-sdk-with-qbraid",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Press & Partnerships",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Press and partnerships announcements from the qBraid team."
+      },
+      "category": "Press Releases",
+      "readTime": "1",
+      "excerpt": "OSU uses qBraid for accessing Intel Quantum SDK.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/679744bdc6a2eefa3a44e7d2_Quantum-Computing-41119.jpg",
+      "content": "blog-posts/osu-uses-intel-quantum-sdk-with-qbraid.html"
+    },
+    {
+      "id": "qubes-course-2025",
+      "title": "qBraid's QuBes course endorsed by White House Q12 Initiative",
+      "slug": "qbraids-quantum-beginners-course-qubes-endorsed-by-white-house-q12-intiative",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Press & Partnerships",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Press and partnerships announcements from the qBraid team."
+      },
+      "category": "Press Releases",
+      "readTime": "1",
+      "excerpt": "Take the QuBes (Quantum Beginners) course to learn quantum computing.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77f4ccb56cc327001889_6620941bf9e38f7724ec9afa_647d4362252da9f4bef39729_fractal-1654672.jpeg",
+      "content": "blog-posts/qbraids-quantum-beginners-course-qubes-endorsed-by-white-house-q12-intiative.html"
+    },
+    {
+      "id": "mit-delta-v-2025",
+      "title": "MIT delta v: qBraid Makes Quantum Computing More Accessible",
+      "slug": "mit-delta-v-2020-qbraid-makes-quantum-computing-more-accessible",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Press & Partnerships",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Press and partnerships announcements from the qBraid team."
+      },
+      "category": "Press Releases",
+      "readTime": "5",
+      "excerpt": "qBraid aims to increase accessibility to, and interoperability amongst, quantum computing resources.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77ea1d0c4a246b10f8bc_662094182efc5a7c8f0d9e13_647d3c945e0046ec9bf381ef_MIT-Delta-V-02-PRESS.jpeg",
+      "content": "blog-posts/mit-delta-v-2020-qbraid-makes-quantum-computing-more-accessible.html"
+    },
+    {
+      "id": "fosdem-2025",
+      "title": "qBraid presents at FOSDEM 2025",
+      "slug": "qbraid-presents-at-fosdem-2025",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "5",
+      "excerpt": "We are pleased to have presented qBraid’s Platform-Agnostic Open-Source Tools at the Quantum Computing Devroom in FOSDEM 2025.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67d0375cddc2e4ee6b9eb2d1_image%20(16).png",
+      "content": "blog-posts/qbraid-presents-at-fosdem-2025.html"
+    },
+    {
+      "id": "pennylane-lightning-2025",
+      "title": "GPU accelerated circuit simulation with Pennylane Lightning",
+      "slug": "qbraid-lab-pennylane-lightning-gpu",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "5",
+      "excerpt": "Accelerating hybrid workflows using Pennylane's embedded simulators with NVIDIA GPUs on qBraid Lab.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67afa37180505d210a8973fa_big-data-database-td1nyj20hyzfffmt.jpg",
+      "content": "blog-posts/qbraid-lab-pennylane-lightning-gpu.html"
+    },
+    {
+      "id": "installing-python-packages-2025",
+      "title": "Installing python packages on qBraid",
+      "slug": "installing-python-packages-on-qbraid",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "5",
+      "excerpt": "Here are 3 ways to install python packages on qBraid.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/677f77eb238ac2aab556a0c2_662094175b29d8a85637970d_64b69c6a2e42885050943495_%2525E3%252582%2525B9%2525E3%252582%2525AF%2525E3%252583%2525AA%2525E3%252583%252583%2525E3%252583%252588%2525202023-07-18%252520%2525E5%25258D%252588%2525E5%252589%25258D8.38.27.png",
+      "content": "blog-posts/installing-python-packages-on-qbraid.html"
+    },
+    {
+      "id": "cirq-1-2-0-2025",
+      "title": "Launch new Cirq v1.2.0 notebook in 4 clicks",
+      "slug": "launch-new-cirq-v1-2-0-notebook-in-4-clicks",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "2",
+      "excerpt": "How to install Cirq v1.2.0 environment on qBraid Lab.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6797333ad2edb0917c4c304a_cirq.png",
+      "content": "blog-posts/launch-new-cirq-v1-2-0-notebook-in-4-clicks.html"
+    },
+    {
+      "id": "build-run-quantum-2025",
+      "title": "Build and Run your quantum circuit on four (quantum) devices with qBraid",
+      "slug": "build-and-run-your-quantum-circuit-on-four-quantum-devices-with-qbraid",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "1",
+      "excerpt": "Let qBraid help you take your first step into the quantum world!",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67afa31041eeca149caafef1_istockphoto-1448152453-612x612.jpg",
+      "content": "blog-posts/build-and-run-your-quantum-circuit-on-four-quantum-devices-with-qbraid.html"
+    },
+    {
+      "id": "intel-quantum-sdk-2025",
+      "title": "General Access to Intel® Quantum SDK",
+      "slug": "intel-quantum-sdk-version-1-0",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "1",
+      "excerpt": "Intel Quantum SDK is generally available on qBraid Lab for Free with no installation necessary.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/67948236678f2c27deeee275_Intel-Spin-Qubit-2.jpg",
+      "content": "blog-posts/intel-quantum-sdk-version-1-0.html"
+    },
+    {
+      "id": "aws-quantum-bernoulli-2025",
+      "title": "[Partner Post] AWS Quantum Technologies Blog: Bernoulli line and the Bloch sphere - visualizing probability and quantum states",
+      "slug": "partner-post-aws-quantum-technologies-blog-bernoulli-line-and-the-bloch-sphere-visualizing-probability-and-quantum-states",
+      "date": "2025-12-01",
+      "author": {
+        "name": "qBraid Team",
+        "title": "Product Announcements",
+        "image": "Media/qBraid Logo.png",
+        "bio": "Product updates and releases from the qBraid team."
+      },
+      "category": "Product",
+      "readTime": "1",
+      "excerpt": "Dive into the intricate interplay of the Bernoulli line and the Bloch sphere, revealing geometric insights into quantum state dynamics.",
+      "featuredImage": "https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/679545f7bd7d68d914b983af_quantum-aigoogle-10.jpg",
+      "content": "blog-posts/partner-post-aws-quantum-technologies-blog-bernoulli-line-and-the-bloch-sphere-visualizing-probability-and-quantum-states.html"
     }
   ],
   "categories": [
@@ -452,4 +639,3 @@
     "Research"
   ]
 }
-

@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>qBraid Announces qBraid SDK Integrated with Amazon Braket | qBraid Blog</title>
-  <meta name="description" content="qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket.">
+  <meta name="description" content="qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket">
   <meta property="og:title" content="qBraid Announces qBraid SDK Integrated with Amazon Braket">
-  <meta property="og:description" content="qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket.">
+  <meta property="og:description" content="qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="../Media/blog/amazon-braket-sdk-header.png">
+  <meta property="og:image" content="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6797355cf89c9f377b364cbe_jobs_tag.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="../logos/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,6 +40,34 @@
     .nav-dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
     .dropdown-item { display: block; padding: 0.65rem 1rem; color: var(--text-muted); text-decoration: none; border-radius: 0.5rem; transition: all 0.2s; font-size: 0.9rem; }
     .dropdown-item:hover { background: rgba(70, 9, 111, 0.1); color: var(--text); }
+    .dropdown-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      line-height: 1.25;
+    }
+
+    .dropdown-item .dropdown-title {
+      color: var(--text);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dropdown-item .dropdown-desc {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .dropdown-item:hover .dropdown-title {
+      color: var(--text);
+    }
+
+    .dropdown-item:hover .dropdown-desc {
+      color: var(--text-muted);
+    }
+
     .nav-buttons { display: flex; align-items: center; gap: 1rem; }
     .btn { padding: 0.6rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; border: none; cursor: pointer; display: inline-block; }
     .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--dark-border); }
@@ -153,9 +181,9 @@
         <div class="nav-dropdown">
           <span class="nav-link has-dropdown">Products</span>
           <div class="dropdown-content">
-            <a href="../qbraid-lab.html" class="dropdown-item">qBraid Lab</a>
-            <a href="../qbraid-os.html" class="dropdown-item">qBraid OS</a>
-            <a href="../qbook.html" class="dropdown-item">qBook</a>
+            <a href="../qbraid-lab.html" class="dropdown-item"><span class="dropdown-title">qBraid Lab</span><span class="dropdown-desc">The quantum IDE</span></a>
+            <a href="../qbraid-os.html" class="dropdown-item"><span class="dropdown-title">qBraid OS</span><span class="dropdown-desc">Cloud infrastructure for quantum devices</span></a>
+            <a href="../qbook.html" class="dropdown-item"><span class="dropdown-title">qBook</span><span class="dropdown-desc">Education platform</span></a>
           </div>
         </div>
         <div class="nav-dropdown">
@@ -195,15 +223,15 @@
       <h1 class="article-title">qBraid Announces qBraid SDK Integrated with Amazon Braket on qBraid Lab</h1>
       <div class="article-meta">
         <span class="article-meta-item">December 2025</span>
-        <span class="article-meta-item">6 min read</span>
+        <span class="article-meta-item">5 min read</span>
       </div>
     </header>
     <div class="article-featured-image">
-      <img src="../Media/blog/amazon-braket-sdk-header.png" alt="Amazon Braket SDK on qBraid">
+      <img src="https://cdn.prod.website-files.com/677775a8e6eeb2b64ce503a0/6797355cf89c9f377b364cbe_jobs_tag.png" alt="Amazon Braket SDK on qBraid">
     </div>
     <div class="article-content">
       <h2>Agnostic access to quantum devices</h2>
-      <p>qBraid SDK now integrates with Amazon Braket, providing unified access to leading quantum computers and simulators from a single, Python-native interface.</p>
+      <p>qBraid provides agnostic connections to quantum computers and simulators thanks to Amazon Braket</p>
       <h3>What’s included</h3>
       <ul>
         <li>Cross-framework transpilation and device-agnostic APIs</li>
