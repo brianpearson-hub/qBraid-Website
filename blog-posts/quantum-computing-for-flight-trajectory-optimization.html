@@ -36,7 +36,144 @@
         font-size: 1rem;
       }
     }
-  </style>
+  
+    /* Mobile Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      margin-left: auto;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: rgba(15, 15, 15, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--dark-border);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu-item {
+      border-bottom: 1px solid var(--dark-border);
+    }
+
+    .mobile-menu-item > a,
+    .mobile-menu-toggle {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-menu-toggle::after {
+      content: '▼';
+      font-size: 0.75rem;
+      transition: transform 0.3s;
+    }
+
+    .mobile-menu-toggle.active::after {
+      transform: rotate(180deg);
+    }
+
+    .mobile-menu-item > a:active,
+    .mobile-menu-toggle:active {
+      background: rgba(70, 9, 111, 0.2);
+      color: var(--secondary);
+    }
+
+    .mobile-submenu {
+      display: none;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 0.5rem 0;
+    }
+
+    .mobile-submenu.active {
+      display: block;
+    }
+
+    .mobile-submenu a {
+      display: block;
+      padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .mobile-submenu a:active {
+      background: rgba(70, 9, 111, 0.2);
+      color: var(--text);
+    }
+
+    .mobile-menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem 1.5rem 1rem;
+      border-top: 1px solid var(--dark-border);
+      margin-top: 1rem;
+    }
+
+    .mobile-menu-buttons .btn {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+    }
+
+</style>
 </head>
 <body>
   <nav class="nav">
@@ -55,7 +192,46 @@
     </div>
   </nav>
 
-  <article class="article-container" style="padding-top:80px;min-height:100vh;background:#0f0f0f;color:#fff;font-family:'Inter',sans-serif;">
+      <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('products-submenu', this)">Products</button>
+        <div class="mobile-submenu" id="products-submenu">
+          <a href="../qbraid-lab.html">qBraid Lab</a>
+          <a href="../qbraid-os.html">qBraid OS</a>
+          <a href="../qbook.html">qBook</a>
+          <a href="../pilots.html">Pilots</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('solutions-submenu', this)">Solutions</button>
+        <div class="mobile-submenu" id="solutions-submenu">
+          <a href="../education.html">Education</a>
+          <a href="../research.html">Research</a>
+          <a href="../enterprise.html">Enterprise</a>
+          <a href="../quantum-companies.html">Quantum Companies</a>
+          <a href="../ecosystem-development.html">Ecosystem Development</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('resources-submenu', this)">Resources</button>
+        <div class="mobile-submenu" id="resources-submenu">
+          <a href="https://docs.qbraid.com/home/introduction" target="_blank" rel="noopener">Documentation</a>
+          <a href="../tutorials.html">Tutorials</a>
+          <a href="../blog.html">Blog</a>
+          <a href="https://discord.com/invite/9jpmpeEV65" target="_blank" rel="noopener">Community</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="../pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="mobile-menu-buttons">
+      <a href="https://account.qbraid.com/" class="btn btn-secondary">Login</a>
+      <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div><article class="article-container" style="padding-top:80px;min-height:100vh;background:#0f0f0f;color:#fff;font-family:'Inter',sans-serif;">
     <div class="back-to-blog" style="max-width:1200px;margin:1rem auto 0.5rem;padding:0 2rem;text-align:left;">
       <a href="../blog.html" style="color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,0.1);padding:0.75rem 1.5rem;border-radius:8px;display:inline-flex;gap:8px;">← Back to Blog</a>
     </div>
@@ -81,6 +257,7 @@
       <p style="color:#a1a1aa;">These pilots demonstrate the practical benefits of hybrid quantum workflows for complex optimization.</p>
     </div>
   </article>
+<script src="../js/site.js" defer></script>
 </body>
 </html>
 

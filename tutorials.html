@@ -181,7 +181,23 @@
         font-size: 0.98rem;
       }
     }
-  </style>
+  
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-buttons {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-container {
+        gap: 0;
+      }
+    }
+
+</style>
 </head>
 <body>
     <nav class="nav">
@@ -229,7 +245,46 @@
     </div>
   </nav>
 
-  <section class="hero">
+      <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-links">
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('products-submenu', this)">Products</button>
+        <div class="mobile-submenu" id="products-submenu">
+          <a href="qbraid-lab.html">qBraid Lab</a>
+          <a href="qbraid-os.html">qBraid OS</a>
+          <a href="qbook.html">qBook</a>
+          <a href="pilots.html">Pilots</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('solutions-submenu', this)">Solutions</button>
+        <div class="mobile-submenu" id="solutions-submenu">
+          <a href="education.html">Education</a>
+          <a href="research.html">Research</a>
+          <a href="enterprise.html">Enterprise</a>
+          <a href="quantum-companies.html">Quantum Companies</a>
+          <a href="ecosystem-development.html">Ecosystem Development</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <button class="mobile-menu-toggle" onclick="toggleSubmenu('resources-submenu', this)">Resources</button>
+        <div class="mobile-submenu" id="resources-submenu">
+          <a href="https://docs.qbraid.com/home/introduction" target="_blank" rel="noopener">Documentation</a>
+          <a href="tutorials.html">Tutorials</a>
+          <a href="blog.html">Blog</a>
+          <a href="https://discord.com/invite/9jpmpeEV65" target="_blank" rel="noopener">Community</a>
+        </div>
+      </div>
+      <div class="mobile-menu-item">
+        <a href="pricing.html">Pricing</a>
+      </div>
+    </div>
+    <div class="mobile-menu-buttons">
+      <a href="https://account.qbraid.com/" class="btn btn-secondary">Login</a>
+      <a href="https://account.qbraid.com/" class="btn btn-primary">Sign Up</a>
+    </div>
+  </div><section class="hero">
     <div class="hero-content">
       <h1><span class="gradient-text">Quantum Computing</span> Tutorials</h1>
       <p>Step-by-step guides to master quantum computing with qBraid.</p>
@@ -265,6 +320,7 @@
       <p>&copy; 2026 qBraid. All rights reserved. | <a href="index.html">Home</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a></p>
     </div>
   </footer>
+<script src="js/site.js" defer></script>
 </body>
 </html>
 
