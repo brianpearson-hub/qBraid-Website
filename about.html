@@ -260,6 +260,110 @@
       font-size: 1.5rem;
       cursor: pointer;
       padding: 0.5rem;
+      margin-left: auto;
+      z-index: 1001;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: rgba(15, 15, 15, 0.98);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--dark-border);
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+      z-index: 1000;
+      padding: 1rem 0;
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-menu-item {
+      border-bottom: 1px solid var(--dark-border);
+    }
+
+    .mobile-menu-item > a,
+    .mobile-menu-toggle {
+      display: block;
+      padding: 1rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+      background: none;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .mobile-menu-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-menu-toggle::after {
+      content: '+';
+      font-size: 1.25rem;
+      transition: transform 0.2s;
+    }
+
+    .mobile-menu-toggle.active::after {
+      transform: rotate(45deg);
+    }
+
+    .mobile-menu-item > a:active,
+    .mobile-menu-toggle:active {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-submenu {
+      display: none;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.25rem 0;
+    }
+
+    .mobile-submenu.active {
+      display: flex;
+    }
+
+    .mobile-submenu a {
+      padding: 0.75rem 1.5rem 0.75rem 2.5rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .mobile-submenu a:hover {
+      color: var(--text);
+    }
+
+    .mobile-menu-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem 1.5rem 0.5rem;
+    }
+
+    .mobile-menu-buttons .btn {
+      width: 100%;
+      justify-content: center;
     }
 
     /* Hero Section */
@@ -830,7 +934,7 @@
     </div>
 
     <div class="team-grid">
-      <a href="https://www.linkedin.com/in/kanavsetia" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/search/results/people/?keywords=Kanav%20Setia%20qBraid" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Kanav.png" alt="Kanav Setia">
@@ -841,7 +945,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/ricky-young" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/ricky-y-1545b3a9/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Ricky.png" alt="Ricky Young">
@@ -852,7 +956,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/ryan-hill" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/ryan-james-hill/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Ryan.png" alt="Ryan Hill">
@@ -863,7 +967,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/kenneth-heitritter" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/kheitritter/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Kenny.png" alt="Kenneth Heitritter">
@@ -874,7 +978,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/tarini-hardikar" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/tarinihardikar/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Tarini.png" alt="Tarini Hardikar">
@@ -885,7 +989,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/james-brown" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/james-brown-65830411/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/James.png" alt="James Brown">
@@ -896,7 +1000,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/brianmpearson" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/briancpearson/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Brian.png" alt="Brian Pearson">
@@ -907,7 +1011,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/alex-van-bussum" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/avanbussum/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Alex.png" alt="Alex Van Bussum">
@@ -918,7 +1022,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/harshit-gupta" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/thegupta2012/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Harshit.png" alt="Harshit Gupta">
@@ -929,7 +1033,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/dhruv-khara" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/belazy/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Dhruv.png" alt="Dhruv Khara">
@@ -940,7 +1044,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/pranet-sharma" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/pranetsharma/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Pranet.png" alt="Pranet Sharma">
@@ -951,7 +1055,7 @@
         </div>
       </a>
 
-      <a href="https://www.linkedin.com/in/masanori-hanada" class="team-member-link" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/masanori-hanada-09509523a/" class="team-member-link" target="_blank" rel="noopener">
         <div class="team-member">
           <div class="team-avatar">
             <img src="Team Headshots/Masanori.png" alt="Masanori Hanada">
@@ -973,10 +1077,10 @@
       <a href="https://motivate.vc" target="_blank" rel="noopener">
         <img src="logos/motivate.svg" alt="Motivate VC" class="investor-logo">
       </a>
-      <a href="https://www.futurelabs.nyc" target="_blank" rel="noopener">
+      <a href="https://futurelabscapital.com/" target="_blank" rel="noopener">
         <img src="logos/futurelabs.png" alt="Future Labs Capital" class="investor-logo">
       </a>
-      <a href="https://www.factorial.fund" target="_blank" rel="noopener">
+      <a href="https://factorialcap.com/" target="_blank" rel="noopener">
         <img src="logos/factorial.png" alt="Factorial VC" class="investor-logo">
       </a>
       <a href="https://buckleyventures.com" target="_blank" rel="noopener">
@@ -985,7 +1089,7 @@
       <a href="https://bantamgroup.com" target="_blank" rel="noopener">
         <img src="logos/bantam.png" alt="Bantam Group" class="investor-logo">
       </a>
-      <a href="https://twelvebelow.com" target="_blank" rel="noopener">
+      <a href="https://www.twelvebelow.co/" target="_blank" rel="noopener">
         <img src="logos/twelvebelow.png" alt="Twelve Below Ventures" class="investor-logo" style="height: 110px; max-width: 360px;">
       </a>
     </div>
